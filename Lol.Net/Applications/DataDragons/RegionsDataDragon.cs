@@ -11,7 +11,7 @@ namespace Lol.Net.Applications.DataDragons
             this.client = client;
         }
 
-        public async Task<DataDragonRegions?> GetRegionsAsync()
+        public async Task<DataDragonRegions> GetRegionsAsync()
         {
             return await BaseApplication.RequestAsync<DataDragonRegions>(client, "https://ddragon.leagueoflegends.com/realms/na.json").ConfigureAwait(false);
         }

@@ -5,7 +5,6 @@
 
     public record Champion_Info(int attack, int defense, int magic, int difficulty);
 
-
     public record Champion_Stats(decimal hp, decimal hpperlevel, decimal mp, decimal mpperlevel, int movespeed, int armor, decimal armorperlevel, int spellblock, decimal spellblockperlevel, int attackrange, decimal hpregen, decimal hpregenperlevel, decimal mpregen, decimal mpregenperlevel, int crit, int critperlevel, decimal attackdamage, decimal attackdamageperlevel, decimal attackspeedperlevel, decimal attackspeed);
 
     public record Champion_Skin();

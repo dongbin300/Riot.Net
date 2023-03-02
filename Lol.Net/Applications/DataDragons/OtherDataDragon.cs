@@ -17,7 +17,7 @@ namespace Lol.Net.Applications.DataDragons
             this.client = client;
         }
 
-        public async Task<Response<DataDragonSummonerSpells>?> GetSummonerSpellsAsync(string version, LanguageEnum language)
+        public async Task<Response<DataDragonSummonerSpells>> GetSummonerSpellsAsync(string version, LanguageEnum language)
         {
             return await BaseApplication.RequestAsync<Response<DataDragonSummonerSpells>>(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/data/{language.Id}/summoner.json").ConfigureAwait(false);
         }
@@ -27,17 +27,17 @@ namespace Lol.Net.Applications.DataDragons
             return await BaseApplication.RequestBytesAsync(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/img/spell/{spellId}.png").ConfigureAwait(false);
         }
 
-        public async Task<Dictionary<string, LolProfileIcon?>?> GetProfileIconsAsync(string version, LanguageEnum language)
+        public async Task<IDictionary<string, LolProfileIcon?>> GetProfileIconsAsync(string version, LanguageEnum language)
         {
             var result = await BaseApplication.RequestAsync<Response<object>>(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/data/{language.Id}/profileicon.json").ConfigureAwait(false);
 
             if (result == null)
             {
-                return null;
+                return default!;
             }
 
             var data = (JObject)result.data;
-            Dictionary<string, LolProfileIcon?> profileIcons = new Dictionary<string, LolProfileIcon?>();
+            var profileIcons = new Dictionary<string, LolProfileIcon?>();
             foreach (var x in data)
             {
                 if (x.Value == null)

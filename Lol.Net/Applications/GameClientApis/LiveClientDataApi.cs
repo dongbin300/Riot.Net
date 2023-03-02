@@ -1,8 +1,5 @@
 ﻿namespace Lol.Net.Applications.GameClientApis
 {
-    /// <summary>
-    /// TODO
-    /// </summary>
     public class LiveClientDataApi
     {
         private readonly HttpClient client;

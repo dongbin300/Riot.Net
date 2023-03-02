@@ -1,29 +1,42 @@
-﻿using System.Net;
+﻿using Newtonsoft.Json;
 
-using Newtonsoft.Json;
+using System.Net;
 
 namespace Lol.Net.Applications
 {
     public class BaseApplication
     {
-        public static async Task<T?> RequestAsync<T>(HttpClient client, string url)
+        public static async Task<T> RequestAsync<T>(HttpClient client, string url)
         {
             try
             {
-                var requestResult = await client.GetAsync(url).ConfigureAwait(false);
+                var response = await client.GetAsync(url).ConfigureAwait(false);
 
-                var response = requestResult.EnsureSuccessStatusCode();
-                if (response.StatusCode == HttpStatusCode.OK)
+                if (response.IsSuccessStatusCode)
                 {
                     var jsonStringResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     T? data = JsonConvert.DeserializeObject<T>(jsonStringResult);
-
-                    return data;
+                    return data ?? default!;
                 }
                 else
                 {
                     throw new Exception(response.ReasonPhrase);
                 }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public static async Task<T> RequestPostAsync<T>(HttpClient client, string url, HttpContent? content = null)
+        {
+            try
+            {
+                var response = await client.PostAsync(url, content).ConfigureAwait(false);
+                var jsonStringResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                T? data = JsonConvert.DeserializeObject<T>(jsonStringResult);
+                return data ?? default!;
             }
             catch
             {

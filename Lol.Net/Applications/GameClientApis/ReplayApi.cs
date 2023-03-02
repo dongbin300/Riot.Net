@@ -1,8 +1,12 @@
-﻿namespace Lol.Net.Applications.GameClientApis
+﻿using Lol.Net.Objects.Models;
+using Lol.Net.Objects.Models.GameClients;
+using Lol.Net.Objects.Models.GameClients.Replays;
+
+using System.Text;
+
+namespace Lol.Net.Applications.GameClientApis
 {
     /// <summary>
-    /// TODO
-    /// 
     /// By default the Replay API is disabled.To start using the Replay API,
     /// enable the Replay API in the game client config by locating where your game is installed
     /// and adding the following lines to the game.cfg file:
@@ -24,49 +28,53 @@
             this.client = client;
         }
 
-        public async Task GetGame()
+        public async Task<GameClientProcess> GetGameAsync()
         {
-
+            return await BaseApplication.RequestAsync<GameClientProcess>(client, "https://127.0.0.1:2999/replay/game").ConfigureAwait(false);
         }
 
-        public async Task GetPlayback()
+        public async Task<ReplayPlaybackState> GetPlaybackAsync()
         {
-
+            return await BaseApplication.RequestAsync<ReplayPlaybackState>(client, "https://127.0.0.1:2999/replay/playback").ConfigureAwait(false);
         }
 
-        public async Task PostPlayback()
+        public async Task<PostResponse<ReplayPlaybackState>> PostPlaybackAsync(string jsonString)
         {
-
+            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            return await BaseApplication.RequestPostAsync<PostResponse<ReplayPlaybackState>>(client, "https://127.0.0.1:2999/replay/playback", content).ConfigureAwait(false);
         }
 
-        public async Task GetRender()
+        public async Task<RenderProperty> GetRenderAsync()
         {
-
+            return await BaseApplication.RequestAsync<RenderProperty>(client, "https://127.0.0.1:2999/replay/render").ConfigureAwait(false);
         }
 
-        public async Task PostRender()
+        public async Task<PostResponse<RenderProperty>> PostRenderAsync(string jsonString)
         {
-
+            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            return await BaseApplication.RequestPostAsync<PostResponse<RenderProperty>>(client, "https://127.0.0.1:2999/replay/render", content).ConfigureAwait(false);
         }
 
-        public async Task GetRecording()
+        public async Task<VideoRecordingStatus> GetRecordingAsync()
         {
-
+            return await BaseApplication.RequestAsync<VideoRecordingStatus>(client, "https://127.0.0.1:2999/replay/recording").ConfigureAwait(false);
         }
 
-        public async Task PostRecording()
+        public async Task<PostResponse<VideoRecordingStatus>> PostRecordingAsync(string jsonString)
         {
-
+            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            return await BaseApplication.RequestPostAsync<PostResponse<VideoRecordingStatus>>(client, "https://127.0.0.1:2999/replay/recording", content).ConfigureAwait(false);
         }
 
-        public async Task GetSequence()
+        public async Task<ReplaySequence> GetSequenceAsync()
         {
-
+            return await BaseApplication.RequestAsync<ReplaySequence>(client, "https://127.0.0.1:2999/replay/sequence").ConfigureAwait(false);
         }
 
-        public async Task PostSequence()
+        public async Task<PostResponse<ReplaySequence>> PostSequenceAsync(string jsonString)
         {
-
+            var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+            return await BaseApplication.RequestPostAsync<PostResponse<ReplaySequence>>(client, "https://127.0.0.1:2999/replay/sequence", content).ConfigureAwait(false);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Lol.Net.Applications
 
         public LolApplication()
         {
-            client = new HttpClient();
+            client = new HttpClient(new HttpClientHandler() { ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true });
             DataDragon = new DataDragon(client);
             GameConstants = new LolGameConstantsApi(client);
             LiveClientData = new LiveClientDataApi(client);

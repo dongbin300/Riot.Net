@@ -16,17 +16,17 @@ namespace Lol.Net.Applications.DataDragons
             this.client = client;
         }
 
-        public async Task<Dictionary<string, Objects.Models.LolModels.Champion?>?> GetChampionsAsync(string version, LanguageEnum language)
+        public async Task<IDictionary<string, Objects.Models.LolModels.Champion?>> GetChampionsAsync(string version, LanguageEnum language)
         {
             var result = await BaseApplication.RequestAsync<Response<object>>(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/data/{language.Id}/champion.json").ConfigureAwait(false);
 
             if (result == null)
             {
-                return null;
+                return default!;
             }
 
             var data = (JObject)result.data;
-            Dictionary<string, Objects.Models.LolModels.Champion?> champions = new Dictionary<string, Objects.Models.LolModels.Champion?>();
+            var champions = new Dictionary<string, Objects.Models.LolModels.Champion?>();
             foreach (var x in data)
             {
                 if (x.Value == null)
@@ -42,17 +42,17 @@ namespace Lol.Net.Applications.DataDragons
             return champions;
         }
 
-        public async Task<Dictionary<string, ChampionDetail?>?> GetChampionDetailAsync(Enums.Champion champion, string version, LanguageEnum language)
+        public async Task<IDictionary<string, ChampionDetail?>> GetChampionDetailAsync(Enums.Champion champion, string version, LanguageEnum language)
         {
             var result = await BaseApplication.RequestAsync<Response<object>>(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/data/{language.Id}/champion/{champion}.json").ConfigureAwait(false);
 
             if (result == null)
             {
-                return null;
+                return default!;
             }
 
             var data = (JObject)result.data;
-            Dictionary<string, ChampionDetail?> champions = new Dictionary<string, ChampionDetail?>();
+            var champions = new Dictionary<string, ChampionDetail?>();
             foreach (var x in data)
             {
                 if (x.Value == null)

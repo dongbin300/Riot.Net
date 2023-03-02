@@ -25,7 +25,7 @@
         public async Task DownloadLatestTgzFile(string localPath)
         {
             var versions = await Versions.GetVersionsAsync().ConfigureAwait(false);
-            var latestVersion = versions?[0] ?? defaultVersion;
+            var latestVersion = versions.First() ?? defaultVersion;
             await BaseApplication.DownloadFileAsync(client, $"https://ddragon.leagueoflegends.com/cdn/dragontail-{latestVersion}.tgz", localPath).ConfigureAwait(false);
         }
 

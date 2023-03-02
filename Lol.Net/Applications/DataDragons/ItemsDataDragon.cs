@@ -2,9 +2,8 @@
 using Lol.Net.Objects.Models.DataDragons;
 using Lol.Net.Objects.Models.LolModels;
 
-using Newtonsoft.Json.Linq;
-
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Lol.Net.Applications.DataDragons
 {
@@ -17,13 +16,13 @@ namespace Lol.Net.Applications.DataDragons
             this.client = client;
         }
 
-        public async Task<DataDragonItems?> GetItemsAsync(string version, LanguageEnum language)
+        public async Task<DataDragonItems> GetItemsAsync(string version, LanguageEnum language)
         {
             var result = await BaseApplication.RequestAsync<object>(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/data/{language.Id}/item.json").ConfigureAwait(false);
 
             if (result == null)
             {
-                return null;
+                return default!;
             }
 
             var obj = (JObject)result;
@@ -34,7 +33,7 @@ namespace Lol.Net.Applications.DataDragons
             var tree = JsonConvert.DeserializeObject<IList<DataDragonItems_Tree>>(obj["tree"].ToString());
             var data = (JObject)obj["data"];
 
-            Dictionary<string, LolItem?> items = new Dictionary<string, LolItem?>();
+            var items = new Dictionary<string, LolItem?>();
             foreach (var x in data)
             {
                 if (x.Value == null)

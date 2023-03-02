@@ -9,9 +9,9 @@
             this.client = client;
         }
 
-        public async Task<IList<string>?> GetVersionsAsync()
+        public async Task<IEnumerable<string>> GetVersionsAsync()
         {
-            return await BaseApplication.RequestAsync<IList<string>>(client, "https://ddragon.leagueoflegends.com/api/versions.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<string>>(client, "https://ddragon.leagueoflegends.com/api/versions.json").ConfigureAwait(false);
         }
     }
 }

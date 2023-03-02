@@ -9,9 +9,9 @@
             this.client = client;
         }
 
-        public async Task<IList<string>?> GetLanguagesAsync()
+        public async Task<IEnumerable<string>> GetLanguagesAsync()
         {
-            return await BaseApplication.RequestAsync<IList<string>>(client, "https://ddragon.leagueoflegends.com/cdn/languages.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<string>>(client, "https://ddragon.leagueoflegends.com/cdn/languages.json").ConfigureAwait(false);
         }
     }
 }
