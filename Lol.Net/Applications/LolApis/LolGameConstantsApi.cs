@@ -11,29 +11,29 @@ namespace Lol.Net.Applications.LolApis
             this.client = client;
         }
 
-        public async Task<IList<Season>?> GetSeasonsAsync()
+        public async Task<IEnumerable<Season>?> GetSeasonsAsync()
         {
-            return await BaseApplication.RequestAsync<IList<Season>>(client, "https://static.developer.riotgames.com/docs/lol/seasons.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<Season>>(client, "https://static.developer.riotgames.com/docs/lol/seasons.json").ConfigureAwait(false);
         }
 
-        public async Task<IList<Queue>?> GetQueuesAsync()
+        public async Task<IEnumerable<Queue>?> GetQueuesAsync()
         {
-            return await BaseApplication.RequestAsync<IList<Queue>>(client, "https://static.developer.riotgames.com/docs/lol/queues.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<Queue>>(client, "https://static.developer.riotgames.com/docs/lol/queues.json").ConfigureAwait(false);
         }
 
-        public async Task<IList<Map>?> GetMapsAsync()
+        public async Task<IEnumerable<Map>?> GetMapsAsync()
         {
-            return await BaseApplication.RequestAsync<IList<Map>>(client, "https://static.developer.riotgames.com/docs/lol/maps.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<Map>>(client, "https://static.developer.riotgames.com/docs/lol/maps.json").ConfigureAwait(false);
         }
 
-        public async Task<IList<GameMode>?> GetGameModesAsync()
+        public async Task<IEnumerable<GameMode>?> GetGameModesAsync()
         {
-            return await BaseApplication.RequestAsync<IList<GameMode>>(client, "https://static.developer.riotgames.com/docs/lol/gameModes.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<GameMode>>(client, "https://static.developer.riotgames.com/docs/lol/gameModes.json").ConfigureAwait(false);
         }
 
-        public async Task<IList<GameType>?> GetGameTypesAsync()
+        public async Task<IEnumerable<GameType>?> GetGameTypesAsync()
         {
-            return await BaseApplication.RequestAsync<IList<GameType>>(client, "https://static.developer.riotgames.com/docs/lol/gameTypes.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<GameType>>(client, "https://static.developer.riotgames.com/docs/lol/gameTypes.json").ConfigureAwait(false);
         }
 
         public async Task DownloadRankedEmblemsFile(string localPath)

@@ -11,7 +11,7 @@ namespace Riot.Net.Test
         static void Main(string[] args)
         {
             var app = new LolApplication();
-            var result = app.DataDragon.Versions.GetVersionsAsync();
+            var result = app.DataDragon.Champions.GetChampionDetailAsync(Champion.Vayne, version, language);
             result.Wait();
 
             Console.WriteLine(result);

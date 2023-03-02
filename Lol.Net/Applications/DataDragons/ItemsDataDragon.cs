@@ -29,8 +29,8 @@ namespace Lol.Net.Applications.DataDragons
             var type = obj["type"].ToString();
             var _version = obj["version"].ToString();
             var basic = JsonConvert.DeserializeObject<Basic>(obj["basic"].ToString());
-            var groups = JsonConvert.DeserializeObject<IList<DataDragonItems_Group>>(obj["groups"].ToString());
-            var tree = JsonConvert.DeserializeObject<IList<DataDragonItems_Tree>>(obj["tree"].ToString());
+            var groups = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Group>>(obj["groups"].ToString());
+            var tree = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Tree>>(obj["tree"].ToString());
             var data = (JObject)obj["data"];
 
             var items = new Dictionary<string, LolItem?>();

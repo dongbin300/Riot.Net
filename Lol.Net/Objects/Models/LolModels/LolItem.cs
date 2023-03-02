@@ -1,6 +1,8 @@
 ﻿namespace Lol.Net.Objects.Models.LolModels
 {
-    public record LolItem(string name, string description, string colloq, string plaintext, IList<string> from, IList<string> into, LolImage image, Gold gold, IList<string> tags, Maps maps, Stats stats, int depth, Effect effect);
+    public record LolItem(string name, string description, string colloq, string plaintext, IEnumerable<string> from, IEnumerable<string> into, LolImage image, Gold gold, IEnumerable<string> tags, Maps maps, Stats stats, int depth, Effect effect);
+
+    public record LolLiveItem(bool canUse, bool consumable, int count, string displayName, int itemID, int price, string rawDescription, string rawDisplayName, int slot);
 
     public record Effect(string Effect1Amount, string Effect2Amount, string Effect3Amount, string Effect4Amount);
 
@@ -89,14 +91,14 @@
         int stacks,
         int depth,
         bool consumeOnFull,
-        IList<object> from,
-        IList<object> into,
+        IEnumerable<object> from,
+        IEnumerable<object> into,
         int specialRecipe,
         bool inStore,
         bool hideFromAll,
         string requiredChampion,
         string requiredAlly,
         Stats stats,
-        IList<object> tags,
+        IEnumerable<object> tags,
         Maps maps);
 }
