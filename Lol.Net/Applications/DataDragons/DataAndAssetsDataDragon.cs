@@ -1,4 +1,8 @@
-﻿namespace Lol.Net.Applications.DataDragons
+﻿using Lol.Net.Objects;
+
+using Riot.Net.Extensions;
+
+namespace Lol.Net.Applications.DataDragons
 {
     public class DataAndAssetsDataDragon
     {
@@ -11,7 +15,7 @@
 
         public async Task<IEnumerable<string>> GetLanguagesAsync()
         {
-            return await BaseApplication.RequestAsync<IEnumerable<string>>(client, "https://ddragon.leagueoflegends.com/cdn/languages.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<string>>(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("languages.json")).ConfigureAwait(false);
         }
     }
 }

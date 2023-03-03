@@ -1,6 +1,8 @@
 ﻿using Lol.Net.Applications;
 using Lol.Net.Enums;
 
+using Riot.Net.Extensions;
+
 namespace Riot.Net.Test
 {
     internal class Program

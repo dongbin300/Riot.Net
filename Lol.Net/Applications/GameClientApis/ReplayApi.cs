@@ -1,6 +1,9 @@
-﻿using Lol.Net.Objects.Models;
+﻿using Lol.Net.Objects;
+using Lol.Net.Objects.Models;
 using Lol.Net.Objects.Models.GameClients;
 using Lol.Net.Objects.Models.GameClients.Replays;
+
+using Riot.Net.Extensions;
 
 using System.Text;
 
@@ -30,51 +33,51 @@ namespace Lol.Net.Applications.GameClientApis
 
         public async Task<GameClientProcess> GetGameAsync()
         {
-            return await BaseApplication.RequestAsync<GameClientProcess>(client, "https://127.0.0.1:2999/replay/game").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<GameClientProcess>(client, LolApiAddresses.ReplayAddress.CombineUri("game")).ConfigureAwait(false);
         }
 
         public async Task<ReplayPlaybackState> GetPlaybackAsync()
         {
-            return await BaseApplication.RequestAsync<ReplayPlaybackState>(client, "https://127.0.0.1:2999/replay/playback").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<ReplayPlaybackState>(client, LolApiAddresses.ReplayAddress.CombineUri("playback")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<ReplayPlaybackState>> PostPlaybackAsync(string jsonString)
         {
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-            return await BaseApplication.RequestPostAsync<PostResponse<ReplayPlaybackState>>(client, "https://127.0.0.1:2999/replay/playback", content).ConfigureAwait(false);
+            return await BaseApplication.RequestPostAsync<PostResponse<ReplayPlaybackState>>(client, LolApiAddresses.ReplayAddress.CombineUri("playback")).ConfigureAwait(false);
         }
 
         public async Task<RenderProperty> GetRenderAsync()
         {
-            return await BaseApplication.RequestAsync<RenderProperty>(client, "https://127.0.0.1:2999/replay/render").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<RenderProperty>(client, LolApiAddresses.ReplayAddress.CombineUri("render")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<RenderProperty>> PostRenderAsync(string jsonString)
         {
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-            return await BaseApplication.RequestPostAsync<PostResponse<RenderProperty>>(client, "https://127.0.0.1:2999/replay/render", content).ConfigureAwait(false);
+            return await BaseApplication.RequestPostAsync<PostResponse<RenderProperty>>(client, LolApiAddresses.ReplayAddress.CombineUri("render")).ConfigureAwait(false);
         }
 
         public async Task<VideoRecordingStatus> GetRecordingAsync()
         {
-            return await BaseApplication.RequestAsync<VideoRecordingStatus>(client, "https://127.0.0.1:2999/replay/recording").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<VideoRecordingStatus>(client, LolApiAddresses.ReplayAddress.CombineUri("recording")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<VideoRecordingStatus>> PostRecordingAsync(string jsonString)
         {
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-            return await BaseApplication.RequestPostAsync<PostResponse<VideoRecordingStatus>>(client, "https://127.0.0.1:2999/replay/recording", content).ConfigureAwait(false);
+            return await BaseApplication.RequestPostAsync<PostResponse<VideoRecordingStatus>>(client, LolApiAddresses.ReplayAddress.CombineUri("recording")).ConfigureAwait(false);
         }
 
         public async Task<ReplaySequence> GetSequenceAsync()
         {
-            return await BaseApplication.RequestAsync<ReplaySequence>(client, "https://127.0.0.1:2999/replay/sequence").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<ReplaySequence>(client, LolApiAddresses.ReplayAddress.CombineUri("sequence")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<ReplaySequence>> PostSequenceAsync(string jsonString)
         {
             var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
-            return await BaseApplication.RequestPostAsync<PostResponse<ReplaySequence>>(client, "https://127.0.0.1:2999/replay/sequence", content).ConfigureAwait(false);
+            return await BaseApplication.RequestPostAsync<PostResponse<ReplaySequence>>(client, LolApiAddresses.ReplayAddress.CombineUri("sequence")).ConfigureAwait(false);
         }
     }
 }

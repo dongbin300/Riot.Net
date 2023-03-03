@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riot.Net.Test", "Riot.Net.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.Net.Tests", "Lol.Net.Tests\Lol.Net.Tests.csproj", "{5B611375-5654-4F49-A201-70500E5099F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lol.Net.Examples", "Lol.Net.Examples\Lol.Net.Examples.csproj", "{4E4A6313-48E9-4285-9432-EE9FBC038C40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.Net.Examples", "Lol.Net.Examples\Lol.Net.Examples.csproj", "{4E4A6313-48E9-4285-9432-EE9FBC038C40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riot.Net", "Riot.Net\Riot.Net.csproj", "{A2888809-BC21-4BEE-AA73-E8157590D2B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4E4A6313-48E9-4285-9432-EE9FBC038C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E4A6313-48E9-4285-9432-EE9FBC038C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E4A6313-48E9-4285-9432-EE9FBC038C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2888809-BC21-4BEE-AA73-E8157590D2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2888809-BC21-4BEE-AA73-E8157590D2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2888809-BC21-4BEE-AA73-E8157590D2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2888809-BC21-4BEE-AA73-E8157590D2B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

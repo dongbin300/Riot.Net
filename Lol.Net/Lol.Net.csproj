@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>Lol.Net</PackageId>
-		<Version>1.1.2</Version>
+		<Version>1.2.3</Version>
 		<Authors>Gaten</Authors>
 		<Company>Erin Wave</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -23,6 +23,10 @@
 	<ItemGroup>
 		<Folder Include="Applications\LeagueClientApis\" />
 		<Folder Include="Applications\TournamentApis\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Riot.Net\Riot.Net.csproj" />
 	</ItemGroup>
 
 </Project>

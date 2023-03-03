@@ -1,4 +1,8 @@
-﻿namespace Lol.Net.Applications.DataDragons
+﻿using Lol.Net.Objects;
+
+using Riot.Net.Extensions;
+
+namespace Lol.Net.Applications.DataDragons
 {
     public class VersionsDataDragon
     {
@@ -11,7 +15,7 @@
 
         public async Task<IEnumerable<string>> GetVersionsAsync()
         {
-            return await BaseApplication.RequestAsync<IEnumerable<string>>(client, "https://ddragon.leagueoflegends.com/api/versions.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<string>>(client, LolApiAddresses.DataDragonBaseAddress.CombineUri("api", "versions.json")).ConfigureAwait(false);
         }
     }
 }

@@ -1,9 +1,12 @@
 ﻿using Lol.Net.Enums;
+using Lol.Net.Objects;
 using Lol.Net.Objects.Models.DataDragons;
 using Lol.Net.Objects.Models.LolModels;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+
+using Riot.Net.Extensions;
 
 namespace Lol.Net.Applications.DataDragons
 {
@@ -18,7 +21,7 @@ namespace Lol.Net.Applications.DataDragons
 
         public async Task<DataDragonItems> GetItemsAsync(string version, LanguageEnum language)
         {
-            var result = await BaseApplication.RequestAsync<object>(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/data/{language.Id}/item.json").ConfigureAwait(false);
+            var result = await BaseApplication.RequestAsync<object>(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "item.json")).ConfigureAwait(false);
 
             if (result == null)
             {
@@ -51,7 +54,7 @@ namespace Lol.Net.Applications.DataDragons
 
         public async Task<byte[]> GetItemAssetsAsync(string itemId, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, $"http://ddragon.leagueoflegends.com/cdn/{version}/img/item/{itemId}.png").ConfigureAwait(false);
+            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "item", itemId, ".png")).ConfigureAwait(false);
         }
     }
 }

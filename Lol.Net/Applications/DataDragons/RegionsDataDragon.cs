@@ -1,4 +1,7 @@
-﻿using Lol.Net.Objects.Models.DataDragons;
+﻿using Lol.Net.Objects;
+using Lol.Net.Objects.Models.DataDragons;
+
+using Riot.Net.Extensions;
 
 namespace Lol.Net.Applications.DataDragons
 {
@@ -13,7 +16,7 @@ namespace Lol.Net.Applications.DataDragons
 
         public async Task<DataDragonRegions> GetRegionsAsync()
         {
-            return await BaseApplication.RequestAsync<DataDragonRegions>(client, "https://ddragon.leagueoflegends.com/realms/na.json").ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<DataDragonRegions>(client, LolApiAddresses.DataDragonBaseAddress.CombineUri("realms", "na.json")).ConfigureAwait(false);
         }
     }
 }

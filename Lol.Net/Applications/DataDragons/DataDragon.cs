@@ -1,4 +1,8 @@
-﻿namespace Lol.Net.Applications.DataDragons
+﻿using Lol.Net.Objects;
+
+using Riot.Net.Extensions;
+
+namespace Lol.Net.Applications.DataDragons
 {
     public class DataDragon
     {
@@ -26,17 +30,17 @@
         {
             var versions = await Versions.GetVersionsAsync().ConfigureAwait(false);
             var latestVersion = versions.First() ?? defaultVersion;
-            await BaseApplication.DownloadFileAsync(client, $"https://ddragon.leagueoflegends.com/cdn/dragontail-{latestVersion}.tgz", localPath).ConfigureAwait(false);
+            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-", latestVersion, ".tgz"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadTgzFile(string localPath)
         {
-            await BaseApplication.DownloadFileAsync(client, "https://ddragon.leagueoflegends.com/cdn/dragontail-13.4.1.tgz", localPath).ConfigureAwait(false);
+            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-13.4.1.tgz"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadZipFile(string localPath)
         {
-            await BaseApplication.DownloadFileAsync(client, "https://ddragon.leagueoflegends.com/cdn/dragontail-10.10.5.zip", localPath).ConfigureAwait(false);
+            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-10.10.5.zip"), localPath).ConfigureAwait(false);
         }
         
     }
