@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>Lol.Net</PackageId>
-		<Version>1.2.3</Version>
+		<Version>1.2.4</Version>
 		<Authors>Gaten</Authors>
 		<Company>Erin Wave</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

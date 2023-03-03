@@ -62,7 +62,7 @@ namespace Lol.Net.Applications.GameClientApis
 
         public async Task<IEnumerable<LolLiveItem>> GetActivePlayerItems(string summonerName)
         {
-            return await BaseApplication.RequestAsync<IEnumerable<LolLiveItem>>(client, LolApiAddresses.LiveClientDataAddress.CombineUri(relativeUris: "playeritems?summonerName=", summonerName)).ConfigureAwait(false);
+            return await BaseApplication.RequestAsync<IEnumerable<LolLiveItem>>(client, LolApiAddresses.LiveClientDataAddress.CombineUri("playeritems?summonerName=", summonerName)).ConfigureAwait(false);
         }
 
         public async Task<LiveGameData_Events> GetEventData()

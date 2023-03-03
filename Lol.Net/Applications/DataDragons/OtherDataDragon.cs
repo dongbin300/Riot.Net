@@ -27,7 +27,7 @@ namespace Lol.Net.Applications.DataDragons
 
         public async Task<byte[]> GetSummonerSpellAssetsAsync(string spellId, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "spell", spellId, ".png")).ConfigureAwait(false);
+            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "spell", spellId + ".png")).ConfigureAwait(false);
         }
 
         public async Task<IDictionary<string, LolProfileIcon?>> GetProfileIconsAsync(string version, LanguageEnum language)
@@ -58,22 +58,22 @@ namespace Lol.Net.Applications.DataDragons
 
         public async Task<byte[]> GetProfileIconAssetsAsync(string profileIconId, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "profileicon", profileIconId, ".png")).ConfigureAwait(false);
+            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "profileicon", profileIconId + ".png")).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetMinimapAssetsAsync(string mapName, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "map", mapName, ".png")).ConfigureAwait(false);
+            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "map", mapName + ".png")).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetSpriteAssetsAsync(string spellName, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "sprite", spellName, ".png")).ConfigureAwait(false);
+            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "sprite", spellName + ".png")).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetScoreboardIconAssetsAsync(string name, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "ui", name, ".png")).ConfigureAwait(false);
+            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "ui", name + ".png")).ConfigureAwait(false);
         }
     }
 }

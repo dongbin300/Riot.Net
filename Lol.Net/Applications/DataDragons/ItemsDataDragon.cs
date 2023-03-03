@@ -54,7 +54,7 @@ namespace Lol.Net.Applications.DataDragons
 
         public async Task<byte[]> GetItemAssetsAsync(string itemId, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "item", itemId, ".png")).ConfigureAwait(false);
+            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "item", itemId + ".png")).ConfigureAwait(false);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Lol.Net.Applications.DataDragons
         {
             var versions = await Versions.GetVersionsAsync().ConfigureAwait(false);
             var latestVersion = versions.First() ?? defaultVersion;
-            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-", latestVersion, ".tgz"), localPath).ConfigureAwait(false);
+            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-", latestVersion + ".tgz"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadTgzFile(string localPath)
