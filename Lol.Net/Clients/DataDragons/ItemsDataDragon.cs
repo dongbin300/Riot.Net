@@ -8,20 +8,17 @@ using Newtonsoft.Json.Linq;
 
 using Riot.Net.Extensions;
 
-namespace Lol.Net.Applications.DataDragons
+namespace Lol.Net.Clients.DataDragons
 {
-    public class ItemsDataDragon
+    public class ItemsDataDragon : BaseClient
     {
-        private readonly HttpClient client;
-
-        public ItemsDataDragon(HttpClient client)
+        public ItemsDataDragon(HttpClient client) : base(client)
         {
-            this.client = client;
         }
 
         public async Task<DataDragonItems> GetItemsAsync(string version, LanguageEnum language)
         {
-            var result = await BaseApplication.RequestAsync<object>(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "item.json")).ConfigureAwait(false);
+            var result = await GetAsync<object>(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "item.json")).ConfigureAwait(false);
 
             if (result == null)
             {
@@ -54,7 +51,7 @@ namespace Lol.Net.Applications.DataDragons
 
         public async Task<byte[]> GetItemAssetsAsync(string itemId, string version)
         {
-            return await BaseApplication.RequestBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "item", itemId + ".png")).ConfigureAwait(false);
+            return await GetBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "item", itemId + ".png")).ConfigureAwait(false);
         }
     }
 }

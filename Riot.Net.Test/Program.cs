@@ -1,7 +1,5 @@
-﻿using Lol.Net.Applications;
+﻿using Lol.Net.Clients;
 using Lol.Net.Enums;
-
-using Riot.Net.Extensions;
 
 namespace Riot.Net.Test
 {
@@ -12,7 +10,7 @@ namespace Riot.Net.Test
 
         static void Main(string[] args)
         {
-            var app = new LolApplication();
+            var app = new LolClient();
             var result = app.DataDragon.Champions.GetChampionAbilityAssetsAsync("FlashFrost", version);
             result.Wait();
 

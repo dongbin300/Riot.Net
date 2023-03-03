@@ -4,16 +4,6 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-
-		<PackageId>Lol.Net</PackageId>
-		<Version>1.2.4</Version>
-		<Authors>Gaten</Authors>
-		<Company>Erin Wave</Company>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<RepositoryUrl>https://github.com/dongbin300/Riot.Net</RepositoryUrl>
-		<Description>
-			RiotGames Open API wrapper for .NET includes League of Legends(LoL), Legends of Runeterra(LoR), Teamfight Tactics(TFT) and Valorant(VAL).
-		</Description>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -21,8 +11,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Applications\LeagueClientApis\" />
-		<Folder Include="Applications\TournamentApis\" />
+		<Folder Include="Clients\LeagueClientApis\" />
+		<Folder Include="Clients\TournamentApis\" />
 	</ItemGroup>
 
 	<ItemGroup>

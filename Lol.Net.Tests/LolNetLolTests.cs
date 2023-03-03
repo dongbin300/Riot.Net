@@ -1,15 +1,15 @@
-using Lol.Net.Applications;
+using Lol.Net.Clients;
 
 namespace Lol.Net.Tests
 {
     public class LolNetLolTests
     {
-        LolApplication app;
+        LolClient app;
 
         [SetUp]
         public void Setup()
         {
-            app = new LolApplication();
+            app = new LolClient();
         }
 
         [Test]

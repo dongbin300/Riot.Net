@@ -2,12 +2,11 @@
 
 using Riot.Net.Extensions;
 
-namespace Lol.Net.Applications.DataDragons
+namespace Lol.Net.Clients.DataDragons
 {
-    public class DataDragon
+    public class DataDragon : BaseClient
     {
         private readonly string defaultVersion = "13.4.1";
-        private readonly HttpClient client;
         public VersionsDataDragon Versions { get; }
         public RegionsDataDragon Regions { get; }
         public DataAndAssetsDataDragon DataAndAssets { get; }
@@ -15,9 +14,8 @@ namespace Lol.Net.Applications.DataDragons
         public ItemsDataDragon Items { get; }
         public OtherDataDragon Other { get; }
 
-        public DataDragon(HttpClient client)
+        public DataDragon(HttpClient client) : base(client)
         {
-            this.client = client;
             Versions = new VersionsDataDragon(client);
             Regions = new RegionsDataDragon(client);
             DataAndAssets = new DataAndAssetsDataDragon(client);
@@ -30,18 +28,17 @@ namespace Lol.Net.Applications.DataDragons
         {
             var versions = await Versions.GetVersionsAsync().ConfigureAwait(false);
             var latestVersion = versions.First() ?? defaultVersion;
-            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-", latestVersion + ".tgz"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-", latestVersion + ".tgz"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadTgzFile(string localPath)
         {
-            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-13.4.1.tgz"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-13.4.1.tgz"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadZipFile(string localPath)
         {
-            await BaseApplication.DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-10.10.5.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("dragontail-10.10.5.zip"), localPath).ConfigureAwait(false);
         }
-        
     }
 }

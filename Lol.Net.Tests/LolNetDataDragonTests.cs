@@ -1,11 +1,11 @@
-using Lol.Net.Applications;
+using Lol.Net.Clients;
 using Lol.Net.Enums;
 
 namespace Lol.Net.Tests
 {
     public class LolNetDataDragonTests
     {
-        LolApplication app;
+        LolClient app;
         string version = "13.4.1";
         string scoreboardIconVersion = "5.5.1";
         LanguageEnum language = Language.English_UnitedStates;
@@ -13,7 +13,7 @@ namespace Lol.Net.Tests
         [SetUp]
         public void Setup()
         {
-            app = new LolApplication();
+            app = new LolClient();
         }
 
         [Test]

@@ -1,4 +1,4 @@
-﻿using Lol.Net.Applications;
+﻿using Lol.Net.Clients;
 using Lol.Net.Enums;
 
 using System.Collections.Generic;
@@ -15,13 +15,13 @@ namespace Lol.Net.Examples
     {
         string version = "13.4.1";
         LanguageEnum language = Enums.Language.English_UnitedStates;
-        LolApplication app;
+        LolClient app;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            app = new LolApplication();
+            app = new LolClient();
             var result = app.DataDragon.Champions.GetChampionsAsync(version, language);
             result.Wait();
 

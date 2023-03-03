@@ -1,12 +1,27 @@
-﻿using Newtonsoft.Json;
+﻿using Lol.Net.Interfaces;
+
+using Newtonsoft.Json;
 
 using System.Net;
+using System.Text;
 
-namespace Lol.Net.Applications
+namespace Lol.Net.Clients
 {
-    public class BaseApplication
+    public class BaseClient : IClient
     {
-        public static async Task<T> RequestAsync<T>(HttpClient client, string url)
+        public HttpClient client { get; set; }
+
+        public BaseClient()
+        {
+            client = new HttpClient();
+        }
+
+        public BaseClient(HttpClient client)
+        {
+            this.client = client;
+        }
+
+        public static async Task<T> GetAsync<T>(HttpClient client, string url)
         {
             try
             {
@@ -29,7 +44,7 @@ namespace Lol.Net.Applications
             }
         }
 
-        public static async Task<T> RequestPostAsync<T>(HttpClient client, string url, HttpContent? content = null)
+        public static async Task<T> PostAsync<T>(HttpClient client, string url, HttpContent? content = null)
         {
             try
             {
@@ -44,7 +59,20 @@ namespace Lol.Net.Applications
             }
         }
 
-        public static async Task<byte[]> RequestBytesAsync(HttpClient client, string url)
+        public static async Task<T> PostAsync<T>(HttpClient client, string url, string jsonString)
+        {
+            try
+            {
+                var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
+                return await PostAsync<T>(client, url, content);
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public static async Task<byte[]> GetBytesAsync(HttpClient client, string url)
         {
             try
             {

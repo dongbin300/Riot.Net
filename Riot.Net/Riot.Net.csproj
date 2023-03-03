@@ -1,9 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<PackageId>Riot.Net</PackageId>
+		<Version>1.3.5</Version>
+		<Authors>Gaten</Authors>
+		<Company>Erin Wave</Company>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<RepositoryUrl>https://github.com/dongbin300/Riot.Net</RepositoryUrl>
+		<Description>
+			RiotGames Open API wrapper for .NET includes League of Legends(LoL), Legends of Runeterra(LoR), Teamfight Tactics(TFT) and Valorant(VAL).
+		</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Icon\riot.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Icon\riot.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
 
 </Project>
