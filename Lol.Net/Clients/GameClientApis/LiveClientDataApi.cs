@@ -2,6 +2,7 @@
 using Lol.Net.Objects.Models.GameClients;
 using Lol.Net.Objects.Models.LolModels;
 
+using Riot.Net.Clients;
 using Riot.Net.Extensions;
 
 namespace Lol.Net.Clients.GameClientApis

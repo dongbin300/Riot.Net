@@ -1,11 +1,11 @@
-﻿using Lol.Net.Interfaces;
+﻿using Newtonsoft.Json;
 
-using Newtonsoft.Json;
+using Riot.Net.Interfaces;
 
 using System.Net;
 using System.Text;
 
-namespace Lol.Net.Clients
+namespace Riot.Net.Clients
 {
     public class BaseClient : IClient
     {

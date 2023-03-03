@@ -1,6 +1,7 @@
 ﻿using Lol.Net.Objects;
 using Lol.Net.Objects.Models.DataDragons;
 
+using Riot.Net.Clients;
 using Riot.Net.Extensions;
 
 namespace Lol.Net.Clients.DataDragons

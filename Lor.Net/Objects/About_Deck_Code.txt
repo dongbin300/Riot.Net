@@ -1,0 +1,7 @@
+﻿https://developer.riotgames.com/docs/lor#deck-codes
+
+The Legends of Runeterra game client allows players to encode/decode Legends of Runeterra decks to/from a simple string so decks can be shared between players. Below is an example of a code for an Demacia/Freljord deck.
+
+CEAAEBYBAEDRMGREFYZDKCABAABQMCYSCQNB2JYCAQAQABYMFIWAMAIBBEKCAIRHFE
+
+The public LoR DeckCodes C# library(https://github.com/RiotGames/LoRDeckCodes) demonstrates how to generate and parse a deck codes. We will review pull requests if members of the community contribute. If members of the community would like to create implementations in other languages, we are happy to reference those implementations in the README(https://github.com/RiotGames/LoRDeckCodes/blob/main/README.md).

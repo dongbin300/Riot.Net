@@ -1,4 +1,4 @@
-﻿namespace Lol.Net.Enums
+﻿namespace Riot.Net.Enums
 {
     public class LanguageEnum
     {

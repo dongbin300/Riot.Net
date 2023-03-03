@@ -1,19 +1,22 @@
-﻿using Lol.Net.Clients.DataDragons;
-using Lol.Net.Clients.GameClientApis;
-using Lol.Net.Clients.LolApis;
+﻿using Riot.Net.Clients;
+using Riot.Net.Interfaces;
 
-using Riot.Net.Clients;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Lol.Net.Clients
+namespace Lor.Net.Clients
 {
-    public class LolClient : BaseClient
+    public class LorClient : BaseClient
     {
         public DataDragon DataDragon { get; set; }
         public LolGameConstantsApi GameConstants { get; set; }
         public LiveClientDataApi LiveClientData { get; set; }
         public ReplayApi Replay { get; set; }
 
-        public LolClient()
+        public LorClient()
         {
             client = new HttpClient(new HttpClientHandler() { ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true });
             DataDragon = new DataDragon(client);
@@ -22,7 +25,7 @@ namespace Lol.Net.Clients
             Replay = new ReplayApi(client);
         }
 
-        ~LolClient()
+        ~LorClient()
         {
             client.Dispose();
         }

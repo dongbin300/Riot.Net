@@ -3,6 +3,7 @@ using Lol.Net.Objects.Models;
 using Lol.Net.Objects.Models.GameClients;
 using Lol.Net.Objects.Models.GameClients.Replays;
 
+using Riot.Net.Clients;
 using Riot.Net.Extensions;
 
 using System.Text;

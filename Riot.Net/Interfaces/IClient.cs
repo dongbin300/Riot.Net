@@ -1,4 +1,4 @@
-﻿namespace Lol.Net.Interfaces
+﻿namespace Riot.Net.Interfaces
 {
     public interface IClient
     {

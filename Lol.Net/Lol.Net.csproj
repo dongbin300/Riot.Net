@@ -7,10 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Folder Include="Clients\LeagueClientApis\" />
 		<Folder Include="Clients\TournamentApis\" />
 	</ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using Lol.Net.Objects;
 
+using Riot.Net.Clients;
 using Riot.Net.Extensions;
 
 using static Lol.Net.Objects.Models.LolModels.GameConstants;
