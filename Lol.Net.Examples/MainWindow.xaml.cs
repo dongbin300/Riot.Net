@@ -1,5 +1,6 @@
 ﻿using Lol.Net.Clients;
-using Lol.Net.Enums;
+
+using Riot.Net.Enums;
 
 using System.Collections.Generic;
 using System.Windows;
@@ -14,7 +15,7 @@ namespace Lol.Net.Examples
     public partial class MainWindow : Window
     {
         string version = "13.4.1";
-        LanguageEnum language = Enums.Language.English_UnitedStates;
+        LanguageEnum language = Riot.Net.Enums.Language.English_UnitedStates;
         LolClient app;
 
         public MainWindow()

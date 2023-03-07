@@ -5,7 +5,7 @@ using Riot.Net.Extensions;
 
 using static Lol.Net.Objects.Models.LolModels.GameConstants;
 
-namespace Lol.Net.Clients.LolApis
+namespace Lol.Net.Clients
 {
     public class LolGameConstantsApi : BaseClient
     {

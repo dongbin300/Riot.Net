@@ -1,5 +1,4 @@
-﻿using Lol.Net.Enums;
-using Lol.Net.Objects;
+﻿using Lol.Net.Objects;
 using Lol.Net.Objects.Models;
 using Lol.Net.Objects.Models.LolModels;
 
@@ -7,6 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 using Riot.Net.Clients;
+using Riot.Net.Enums;
 using Riot.Net.Extensions;
 
 namespace Lol.Net.Clients.DataDragons

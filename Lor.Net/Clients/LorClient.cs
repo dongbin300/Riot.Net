@@ -1,28 +1,24 @@
-﻿using Riot.Net.Clients;
-using Riot.Net.Interfaces;
+﻿using Lor.Net.Clients.DataDragons;
+using Lor.Net.Clients.GameClientApis;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Riot.Net.Clients;
 
 namespace Lor.Net.Clients
 {
     public class LorClient : BaseClient
     {
-        public DataDragon DataDragon { get; set; }
-        public LolGameConstantsApi GameConstants { get; set; }
-        public LiveClientDataApi LiveClientData { get; set; }
-        public ReplayApi Replay { get; set; }
+        public LorDataDragon DataDragon { get; set; }
+        public ActiveDeckApi ActiveDeck { get; set; }
+        public CardPositionsApi CardPosition { get; set; }
+        public GameResultApi GameResult { get; set; }
 
         public LorClient()
         {
             client = new HttpClient(new HttpClientHandler() { ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true });
-            DataDragon = new DataDragon(client);
-            GameConstants = new LolGameConstantsApi(client);
-            LiveClientData = new LiveClientDataApi(client);
-            Replay = new ReplayApi(client);
+            DataDragon = new LorDataDragon(client);
+            ActiveDeck = new ActiveDeckApi(client);
+            CardPosition = new CardPositionsApi(client);
+            GameResult = new GameResultApi(client);
         }
 
         ~LorClient()

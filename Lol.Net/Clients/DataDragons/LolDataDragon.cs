@@ -5,7 +5,7 @@ using Riot.Net.Extensions;
 
 namespace Lol.Net.Clients.DataDragons
 {
-    public class DataDragon : BaseClient
+    public class LolDataDragon : BaseClient
     {
         private readonly string defaultVersion = "13.4.1";
         public VersionsDataDragon Versions { get; }
@@ -15,7 +15,7 @@ namespace Lol.Net.Clients.DataDragons
         public ItemsDataDragon Items { get; }
         public OtherDataDragon Other { get; }
 
-        public DataDragon(HttpClient client) : base(client)
+        public LolDataDragon(HttpClient client) : base(client)
         {
             Versions = new VersionsDataDragon(client);
             Regions = new RegionsDataDragon(client);

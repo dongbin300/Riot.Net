@@ -8,6 +8,7 @@
 
 	<ItemGroup>
 		<Folder Include="Clients\LeagueClientApis\" />
+		<Folder Include="Clients\LolApis\" />
 		<Folder Include="Clients\TournamentApis\" />
 	</ItemGroup>
 

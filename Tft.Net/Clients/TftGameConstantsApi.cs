@@ -3,7 +3,7 @@ using Riot.Net.Extensions;
 
 using Tft.Net.Objects;
 
-namespace Tft.Net.Clients.TftApis
+namespace Tft.Net.Clients
 {
     /// <summary>
     /// There is no static content automatically built for each patch of Teamfight Tactics. Many of the assets from Teamfight Tactics can be gathered from League of Legends' Data Dragon.

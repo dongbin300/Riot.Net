@@ -1,6 +1,8 @@
 using Lol.Net.Clients;
 using Lol.Net.Enums;
 
+using Riot.Net.Enums;
+
 namespace Lol.Net.Tests
 {
     public class LolNetDataDragonTests

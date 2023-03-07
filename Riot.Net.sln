@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.Net.Tests", "Lol.Net.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.Net.Examples", "Lol.Net.Examples\Lol.Net.Examples.csproj", "{4E4A6313-48E9-4285-9432-EE9FBC038C40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Riot.Net", "Riot.Net\Riot.Net.csproj", "{A2888809-BC21-4BEE-AA73-E8157590D2B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Riot.Net", "Riot.Net\Riot.Net.csproj", "{A2888809-BC21-4BEE-AA73-E8157590D2B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lor.Net", "Lor.Net\Lor.Net.csproj", "{D0A78A4B-12CD-476E-9E1C-0EF34257D479}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lor.Net", "Lor.Net\Lor.Net.csproj", "{D0A78A4B-12CD-476E-9E1C-0EF34257D479}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tft.Net", "Tft.Net\Tft.Net.csproj", "{8DB17159-4BFA-4B74-8FF1-FE3E44A2E953}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D0A78A4B-12CD-476E-9E1C-0EF34257D479}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0A78A4B-12CD-476E-9E1C-0EF34257D479}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0A78A4B-12CD-476E-9E1C-0EF34257D479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB17159-4BFA-4B74-8FF1-FE3E44A2E953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB17159-4BFA-4B74-8FF1-FE3E44A2E953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB17159-4BFA-4B74-8FF1-FE3E44A2E953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB17159-4BFA-4B74-8FF1-FE3E44A2E953}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
