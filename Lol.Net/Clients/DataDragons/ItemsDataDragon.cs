@@ -19,7 +19,7 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<DataDragonItems> GetItemsAsync(string version, LanguageEnum language)
         {
-            var result = await GetAsync<object>(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "item.json")).ConfigureAwait(false);
+            var result = await GetAsync<object>(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "item.json")).ConfigureAwait(false);
 
             if (result == null)
             {
@@ -27,12 +27,12 @@ namespace Lol.Net.Clients.DataDragons
             }
 
             var obj = (JObject)result;
-            var type = obj["type"].ToString();
-            var _version = obj["version"].ToString();
-            var basic = JsonConvert.DeserializeObject<Basic>(obj["basic"].ToString());
-            var groups = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Group>>(obj["groups"].ToString());
-            var tree = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Tree>>(obj["tree"].ToString());
-            var data = (JObject)obj["data"];
+            var type = obj.Value<string>("type") ?? string.Empty;
+            var _version = obj.Value<string>("version") ?? string.Empty;
+            var basic = JsonConvert.DeserializeObject<Basic>(obj.Value<string>("basic") ?? string.Empty) ?? default!;
+            var groups = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Group>>(obj.Value<string>("groups") ?? string.Empty) ?? default!;
+            var tree = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Tree>>(obj.Value<string>("tree") ?? string.Empty) ?? default!;
+            var data = obj.Value<JObject>("data") ?? default!;
 
             var items = new Dictionary<string, LolItem?>();
             foreach (var x in data)
@@ -52,7 +52,7 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<byte[]> GetItemAssetsAsync(string itemId, string version)
         {
-            return await GetBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "item", itemId + ".png")).ConfigureAwait(false);
+            return await GetBytesAsync(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "item", itemId + ".png")).ConfigureAwait(false);
         }
     }
 }

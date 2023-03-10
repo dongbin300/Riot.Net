@@ -19,7 +19,7 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<IDictionary<string, Objects.Models.LolModels.Champion?>> GetChampionsAsync(string version, LanguageEnum language)
         {
-            var result = await GetAsync<Response<object>>(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "champion.json")).ConfigureAwait(false);
+            var result = await GetAsync<Response<object>>(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "champion.json")).ConfigureAwait(false);
 
             if (result == null)
             {
@@ -45,7 +45,7 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<IDictionary<string, ChampionDetail?>> GetChampionDetailAsync(Enums.Champion champion, string version, LanguageEnum language)
         {
-            var result = await GetAsync<Response<object>>(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "champion", champion.ToString() + ".json")).ConfigureAwait(false);
+            var result = await GetAsync<Response<object>>(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "champion", champion.ToString() + ".json")).ConfigureAwait(false);
 
             if (result == null)
             {
@@ -71,27 +71,27 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<byte[]> GetChampionSplashAssetsAsync(Enums.Champion champion, int skinNum)
         {
-            return await GetBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri("img", "champion", "splash", champion.ToString() + "_" + skinNum.ToString() + ".jpg")).ConfigureAwait(false);
+            return await GetBytesAsync(Client, LolApiAddresses.DataDragonAddress.CombineUri("img", "champion", "splash", champion.ToString() + "_" + skinNum.ToString() + ".jpg")).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetChampionLoadingScreenAssetsAsync(Enums.Champion champion, int skinNum)
         {
-            return await GetBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri("img", "champion", "loading", champion.ToString() + "_" + skinNum.ToString() + ".jpg")).ConfigureAwait(false);
+            return await GetBytesAsync(Client, LolApiAddresses.DataDragonAddress.CombineUri("img", "champion", "loading", champion.ToString() + "_" + skinNum.ToString() + ".jpg")).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetChampionSquareAssetsAsync(Enums.Champion champion, string version)
         {
-            return await GetBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "champion", champion.ToString() + ".png")).ConfigureAwait(false);
+            return await GetBytesAsync(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "champion", champion.ToString() + ".png")).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetChampionPassiveAssetsAsync(string passiveImageName, string version)
         {
-            return await GetBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "passive", passiveImageName + ".png")).ConfigureAwait(false);
+            return await GetBytesAsync(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "passive", passiveImageName + ".png")).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetChampionAbilityAssetsAsync(string abilityName, string version)
         {
-            return await GetBytesAsync(client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "spell", abilityName + ".png")).ConfigureAwait(false);
+            return await GetBytesAsync(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "img", "spell", abilityName + ".png")).ConfigureAwait(false);
         }
     }
 }

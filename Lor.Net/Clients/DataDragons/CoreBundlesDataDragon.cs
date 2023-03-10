@@ -13,7 +13,7 @@ namespace Lor.Net.Clients.DataDragons
 
         public async Task DownloadLatestZipFile(string localPath)
         {
-            await DownloadFileAsync(client, LorApiAddresses.BaseAddress.CombineUri("latest", "core-en_us.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, LorApiAddresses.BaseAddress.CombineUri("latest", "core-en_us.zip"), localPath).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace Lor.Net.Clients.DataDragons
         /// <returns></returns>
         public async Task DownloadVersionedZipFile(string version, string localPath)
         {
-            await DownloadFileAsync(client, LorApiAddresses.BaseAddress.CombineUri(version, "core-en_us.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, LorApiAddresses.BaseAddress.CombineUri(version, "core-en_us.zip"), localPath).ConfigureAwait(false);
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿namespace Lol.Net.Objects.Models.LolModels
 {
+    public record LolSummoner(string id, string accountId, string puuid, string name, int profileIconId, long revisionDate, int summonerLevel);
+
     public record LolSummonerSpell(
         string id,
         string name,
@@ -10,7 +12,7 @@
         string cooldownBurn,
         IEnumerable<int> cost,
         string costBurn,
-        Champion_Spell_Datavalues datavalues,
+        ChampionSpellDatavalues datavalues,
         IEnumerable<IEnumerable<decimal>> effect,
         IEnumerable<string> effectBurn,
         IEnumerable<object> vars,

@@ -14,7 +14,7 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<DataDragonRegions> GetRegionsAsync()
         {
-            return await GetAsync<DataDragonRegions>(client, LolApiAddresses.DataDragonBaseAddress.CombineUri("realms", "na.json")).ConfigureAwait(false);
+            return await GetAsync<DataDragonRegions>(Client, LolApiAddresses.DataDragonBaseAddress.CombineUri("realms", "na.json")).ConfigureAwait(false);
         }
     }
 }

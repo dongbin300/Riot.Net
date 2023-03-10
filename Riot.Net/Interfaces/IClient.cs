@@ -2,6 +2,6 @@
 {
     public interface IClient
     {
-        HttpClient client { get; }
+        HttpClient Client { get; }
     }
 }

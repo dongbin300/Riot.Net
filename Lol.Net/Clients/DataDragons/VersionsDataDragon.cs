@@ -13,7 +13,7 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<IEnumerable<string>> GetVersionsAsync()
         {
-            return await GetAsync<IEnumerable<string>>(client, LolApiAddresses.DataDragonBaseAddress.CombineUri("api", "versions.json")).ConfigureAwait(false);
+            return await GetAsync<IEnumerable<string>>(Client, LolApiAddresses.DataDragonBaseAddress.CombineUri("api", "versions.json")).ConfigureAwait(false);
         }
     }
 }

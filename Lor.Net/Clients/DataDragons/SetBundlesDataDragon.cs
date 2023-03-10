@@ -17,7 +17,7 @@ namespace Lor.Net.Clients.DataDragons
         {
             var fileName = setBundleType.Id + "-" + language.Id + ".zip";
             
-            await DownloadFileAsync(client, LorApiAddresses.BaseAddress.CombineUri("latest", fileName), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, LorApiAddresses.BaseAddress.CombineUri("latest", fileName), localPath).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -32,13 +32,13 @@ namespace Lor.Net.Clients.DataDragons
         {
             var fileName = setBundleType.Id + "-" + language.Id + ".zip";
 
-            await DownloadFileAsync(client, LorApiAddresses.BaseAddress.CombineUri(version, fileName), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, LorApiAddresses.BaseAddress.CombineUri(version, fileName), localPath).ConfigureAwait(false);
         }
 
         public async Task<byte[]> GetCardImagesAsync(SetBundleTypeEnum setBundleType, LanguageEnum language, string cardId, bool isAlt = false, bool isFull = false)
         {
             var options = (isAlt ? "-alt" : "") + (isFull ? "-full" : "");
-            return await GetBytesAsync(client, LorApiAddresses.BaseAddress.CombineUri("latest", setBundleType.Id, language.Id, "img", "cards", cardId + options + ".png")).ConfigureAwait(false);
+            return await GetBytesAsync(Client, LorApiAddresses.BaseAddress.CombineUri("latest", setBundleType.Id, language.Id, "img", "cards", cardId + options + ".png")).ConfigureAwait(false);
         }
     }
 }

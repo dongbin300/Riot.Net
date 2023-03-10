@@ -14,7 +14,7 @@ namespace Lor.Net.Clients.GameClientApis
 
         public async Task<GameResult> GetGameResultAsync()
         {
-            return await GetAsync<GameResult>(client, LorApiAddresses.GameClientBaseAddress.CombineUri("game-result")).ConfigureAwait(false);
+            return await GetAsync<GameResult>(Client, LorApiAddresses.GameClientBaseAddress.CombineUri("game-result")).ConfigureAwait(false);
         }
     }
 }

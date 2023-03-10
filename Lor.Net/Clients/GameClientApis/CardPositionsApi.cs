@@ -14,7 +14,7 @@ namespace Lor.Net.Clients.GameClientApis
 
         public async Task<CardPosition> GetPositionalRectanglesAsync()
         {
-            return await GetAsync<CardPosition>(client, LorApiAddresses.GameClientBaseAddress.CombineUri("positional-rectangles")).ConfigureAwait(false);
+            return await GetAsync<CardPosition>(Client, LorApiAddresses.GameClientBaseAddress.CombineUri("positional-rectangles")).ConfigureAwait(false);
         }
     }
 }

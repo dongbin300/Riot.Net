@@ -13,32 +13,32 @@ namespace Tft.Net.Clients
     {
         public async Task DownloadSet5File(string localPath)
         {
-            await DownloadFileAsync(client, TftApiAddresses.BaseAddress.CombineUri("set5patch1112.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, TftApiAddresses.BaseAddress.CombineUri("set5patch1112.zip"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadSet4UpdateFile(string localPath)
         {
-            await DownloadFileAsync(client, TftApiAddresses.BaseAddress.CombineUri("set4update.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, TftApiAddresses.BaseAddress.CombineUri("set4update.zip"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadSet4File(string localPath)
         {
-            await DownloadFileAsync(client, TftApiAddresses.BaseAddress.CombineUri("set4.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, TftApiAddresses.BaseAddress.CombineUri("set4.zip"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadSet3UpdateFile(string localPath)
         {
-            await DownloadFileAsync(client, TftApiAddresses.BaseAddress.CombineUri("set3update.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, TftApiAddresses.BaseAddress.CombineUri("set3update.zip"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadSet3File(string localPath)
         {
-            await DownloadFileAsync(client, TftApiAddresses.BaseAddress.CombineUri("set3.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, TftApiAddresses.BaseAddress.CombineUri("set3.zip"), localPath).ConfigureAwait(false);
         }
 
         public async Task DownloadSet2File(string localPath)
         {
-            await DownloadFileAsync(client, TftApiAddresses.BaseAddress.CombineUri("set2.zip"), localPath).ConfigureAwait(false);
+            await DownloadFileAsync(Client, TftApiAddresses.BaseAddress.CombineUri("set2.zip"), localPath).ConfigureAwait(false);
         }
     }
 }

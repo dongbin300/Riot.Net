@@ -9,16 +9,21 @@ namespace Riot.Net.Clients
 {
     public class BaseClient : IClient
     {
-        public HttpClient client { get; set; }
+        public HttpClient Client { get; init; }
 
         public BaseClient()
         {
-            client = new HttpClient();
+            Client = new HttpClient();
         }
 
         public BaseClient(HttpClient client)
         {
-            this.client = client;
+            Client = client;
+        }
+
+        ~BaseClient()
+        {
+            Client.Dispose();
         }
 
         public static async Task<T> GetAsync<T>(HttpClient client, string url)

@@ -32,47 +32,47 @@ namespace Lol.Net.Clients.GameClientApis
 
         public async Task<GameClientProcess> GetGameAsync()
         {
-            return await GetAsync<GameClientProcess>(client, LolApiAddresses.ReplayAddress.CombineUri("game")).ConfigureAwait(false);
+            return await GetAsync<GameClientProcess>(Client, LolApiAddresses.ReplayAddress.CombineUri("game")).ConfigureAwait(false);
         }
 
         public async Task<ReplayPlaybackState> GetPlaybackAsync()
         {
-            return await GetAsync<ReplayPlaybackState>(client, LolApiAddresses.ReplayAddress.CombineUri("playback")).ConfigureAwait(false);
+            return await GetAsync<ReplayPlaybackState>(Client, LolApiAddresses.ReplayAddress.CombineUri("playback")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<ReplayPlaybackState>> PostPlaybackAsync(string jsonString)
         {
-            return await PostAsync<PostResponse<ReplayPlaybackState>>(client, LolApiAddresses.ReplayAddress.CombineUri("playback"), jsonString).ConfigureAwait(false);
+            return await PostAsync<PostResponse<ReplayPlaybackState>>(Client, LolApiAddresses.ReplayAddress.CombineUri("playback"), jsonString).ConfigureAwait(false);
         }
 
         public async Task<RenderProperty> GetRenderAsync()
         {
-            return await GetAsync<RenderProperty>(client, LolApiAddresses.ReplayAddress.CombineUri("render")).ConfigureAwait(false);
+            return await GetAsync<RenderProperty>(Client, LolApiAddresses.ReplayAddress.CombineUri("render")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<RenderProperty>> PostRenderAsync(string jsonString)
         {
-            return await PostAsync<PostResponse<RenderProperty>>(client, LolApiAddresses.ReplayAddress.CombineUri("render"), jsonString).ConfigureAwait(false);
+            return await PostAsync<PostResponse<RenderProperty>>(Client, LolApiAddresses.ReplayAddress.CombineUri("render"), jsonString).ConfigureAwait(false);
         }
 
         public async Task<VideoRecordingStatus> GetRecordingAsync()
         {
-            return await GetAsync<VideoRecordingStatus>(client, LolApiAddresses.ReplayAddress.CombineUri("recording")).ConfigureAwait(false);
+            return await GetAsync<VideoRecordingStatus>(Client, LolApiAddresses.ReplayAddress.CombineUri("recording")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<VideoRecordingStatus>> PostRecordingAsync(string jsonString)
         {
-            return await PostAsync<PostResponse<VideoRecordingStatus>>(client, LolApiAddresses.ReplayAddress.CombineUri("recording"), jsonString).ConfigureAwait(false);
+            return await PostAsync<PostResponse<VideoRecordingStatus>>(Client, LolApiAddresses.ReplayAddress.CombineUri("recording"), jsonString).ConfigureAwait(false);
         }
 
         public async Task<ReplaySequence> GetSequenceAsync()
         {
-            return await GetAsync<ReplaySequence>(client, LolApiAddresses.ReplayAddress.CombineUri("sequence")).ConfigureAwait(false);
+            return await GetAsync<ReplaySequence>(Client, LolApiAddresses.ReplayAddress.CombineUri("sequence")).ConfigureAwait(false);
         }
 
         public async Task<PostResponse<ReplaySequence>> PostSequenceAsync(string jsonString)
         {
-            return await PostAsync<PostResponse<ReplaySequence>>(client, LolApiAddresses.ReplayAddress.CombineUri("sequence"), jsonString).ConfigureAwait(false);
+            return await PostAsync<PostResponse<ReplaySequence>>(Client, LolApiAddresses.ReplayAddress.CombineUri("sequence"), jsonString).ConfigureAwait(false);
         }
     }
 }

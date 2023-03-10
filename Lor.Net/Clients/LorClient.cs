@@ -14,16 +14,16 @@ namespace Lor.Net.Clients
 
         public LorClient()
         {
-            client = new HttpClient(new HttpClientHandler() { ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true });
-            DataDragon = new LorDataDragon(client);
-            ActiveDeck = new ActiveDeckApi(client);
-            CardPosition = new CardPositionsApi(client);
-            GameResult = new GameResultApi(client);
+            Client = new HttpClient(new HttpClientHandler() { ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true });
+            DataDragon = new LorDataDragon(Client);
+            ActiveDeck = new ActiveDeckApi(Client);
+            CardPosition = new CardPositionsApi(Client);
+            GameResult = new GameResultApi(Client);
         }
 
         ~LorClient()
         {
-            client.Dispose();
+            Client.Dispose();
         }
     }
 }

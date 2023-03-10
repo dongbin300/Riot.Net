@@ -13,7 +13,7 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<IEnumerable<string>> GetLanguagesAsync()
         {
-            return await GetAsync<IEnumerable<string>>(client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("languages.json")).ConfigureAwait(false);
+            return await GetAsync<IEnumerable<string>>(Client, LolApiAddresses.DataDragonHttpsAddress.CombineUri("languages.json")).ConfigureAwait(false);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Lor.Net.Clients.GameClientApis
 
         public async Task<ActiveDeck> GetStaticDecklistAsync()
         {
-            return await GetAsync<ActiveDeck>(client, LorApiAddresses.GameClientBaseAddress.CombineUri("static-decklist")).ConfigureAwait(false);
+            return await GetAsync<ActiveDeck>(Client, LorApiAddresses.GameClientBaseAddress.CombineUri("static-decklist")).ConfigureAwait(false);
         }
     }
 }
