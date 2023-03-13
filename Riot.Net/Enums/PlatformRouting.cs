@@ -18,6 +18,7 @@
         SH2,
         TH2,
         TW2,
-        VN2
+        VN2,
+        SG2 // TFT
     }
 }

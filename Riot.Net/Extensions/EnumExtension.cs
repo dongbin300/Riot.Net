@@ -17,6 +17,7 @@ namespace Riot.Net.Extensions
             Queue.RankedFlexSr => "RANKED_FLEX_SR",
             Queue.RankedFlexTt => "RANKED_FLEX_TT",
             Queue.RankedTft => "RANKED_TFT",
+            Queue.RankedTftTurbo => "RANKED_TFT_TURBO",
             _ => ""
         };
     }

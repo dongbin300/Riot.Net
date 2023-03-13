@@ -8,6 +8,7 @@
         RankedTeam55,
         RankedFlexSr,
         RankedFlexTt,
-        RankedTft
+        RankedTft,
+        RankedTftTurbo
     }
 }

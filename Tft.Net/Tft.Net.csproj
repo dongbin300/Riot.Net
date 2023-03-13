@@ -10,8 +10,4 @@
     <ProjectReference Include="..\Riot.Net\Riot.Net.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Clients\TftApis\" />
-  </ItemGroup>
-
 </Project>

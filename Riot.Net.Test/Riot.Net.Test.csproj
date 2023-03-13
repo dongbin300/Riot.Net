@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Lol.Net\Lol.Net.csproj" />
+    <ProjectReference Include="..\Tft.Net\Tft.Net.csproj" />
   </ItemGroup>
 
 </Project>
