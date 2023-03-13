@@ -1,7 +1,15 @@
-﻿using Lol.Net.Objects.Models.LolModels;
+﻿using Lol.Net.Objects.Models;
+using Lol.Net.Objects;
+using Lol.Net.Objects.Models.LolModels;
+
+using Newtonsoft.Json.Linq;
+
+using Newtonsoft.Json;
 
 using Riot.Net.Clients;
 using Riot.Net.Enums;
+
+using System;
 
 namespace Lol.Net.Clients.LolApis
 {
@@ -18,9 +26,24 @@ namespace Lol.Net.Clients.LolApis
             return await GetAsync<IEnumerable<LolChallengeConfig>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/challenges/v1/challenges/config?api_key={apiKey}").ConfigureAwait(false);
         }
 
-        public async Task<IDictionary<long, IDictionary<int, IDictionary<object, decimal>>>> GetAllLevelToPercentilesOfPlayersAsync()
+        public async Task<LolChallengeLevelToPercentile> GetAllLevelToPercentilesOfPlayersAsync()
         {
-            return await GetAsync<IDictionary<long, IDictionary<int, IDictionary<object, decimal>>>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/challenges/v1/challenges/percentiles?api_key={apiKey}").ConfigureAwait(false);
+            var result = await GetAsync<JObject>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/challenges/v1/challenges/percentiles?api_key={apiKey}").ConfigureAwait(false) ?? default!;
+
+            var percentiles = new Dictionary<string, LolChallengePercentile>();
+            foreach (var x in result)
+            {
+                if (x.Value == null)
+                {
+                    continue;
+                }
+
+                string key = x.Key;
+                var value = JsonConvert.DeserializeObject<LolChallengePercentile>(x.Value.ToString()) ?? default!;
+                percentiles.Add(key, value);
+            }
+
+            return new LolChallengeLevelToPercentile(percentiles);
         }
 
         public async Task<LolChallengeConfig> GetChallengeConfigAsync(long challengeId)
@@ -33,9 +56,9 @@ namespace Lol.Net.Clients.LolApis
             return await GetAsync<IEnumerable<LolChallengeApexPlayer>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/challenges/v1/challenges/{challengeId}/leaderboards/by-level/{level}?api_key={apiKey}").ConfigureAwait(false);
         }
 
-        public async Task<IDictionary<object, decimal>> GetLevelToPercentilesAsync(long challengeId)
+        public async Task<IDictionary<string, decimal>> GetLevelToPercentilesAsync(long challengeId)
         {
-            return await GetAsync<IDictionary<object, decimal>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/challenges/v1/challenges/{challengeId}/percentiles?api_key={apiKey}").ConfigureAwait(false);
+            return await GetAsync<IDictionary<string, decimal>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/challenges/v1/challenges/{challengeId}/percentiles?api_key={apiKey}").ConfigureAwait(false);
         }
 
         public async Task<LolChallengePlayer> GetPlayerInfoAsync(string puuid)

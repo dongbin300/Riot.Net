@@ -18,9 +18,9 @@ namespace Lol.Net.Clients.LolApis
             return await GetAsync<LolCurrentGame>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/{summonerId}?api_key={apiKey}").ConfigureAwait(false);
         }
 
-        public async Task<LolFeaturedGames> GetFeaturedGamesAsync(string summonerId)
+        public async Task<LolFeaturedGames> GetFeaturedGamesAsync()
         {
-            return await GetAsync<LolFeaturedGames>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/{summonerId}?api_key={apiKey}").ConfigureAwait(false);
+            return await GetAsync<LolFeaturedGames>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/spectator/v4/featured-games?api_key={apiKey}").ConfigureAwait(false);
         }
     }
 }

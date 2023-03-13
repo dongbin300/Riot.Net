@@ -2,6 +2,7 @@
 {
     public enum RegionalRouting
     {
+        None,
         AMERICAS,
         ASIA,
         EUROPE,

@@ -17,7 +17,7 @@ namespace Lol.Net.Clients.DataDragons
         {
         }
 
-        public async Task<IDictionary<string, Objects.Models.LolModels.Champion?>> GetChampionsAsync(string version, LanguageEnum language)
+        public async Task<IDictionary<string, Champion?>> GetChampionsAsync(string version, LanguageEnum language)
         {
             var result = await GetAsync<Response<object>>(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "champion.json")).ConfigureAwait(false);
 
@@ -27,7 +27,7 @@ namespace Lol.Net.Clients.DataDragons
             }
 
             var data = (JObject)result.data;
-            var champions = new Dictionary<string, Objects.Models.LolModels.Champion?>();
+            var champions = new Dictionary<string, Champion?>();
             foreach (var x in data)
             {
                 if (x.Value == null)
@@ -36,7 +36,7 @@ namespace Lol.Net.Clients.DataDragons
                 }
 
                 string key = x.Key;
-                var value = JsonConvert.DeserializeObject<Objects.Models.LolModels.Champion>(x.Value.ToString());
+                var value = JsonConvert.DeserializeObject<Champion>(x.Value.ToString());
                 champions.Add(key, value);
             }
 

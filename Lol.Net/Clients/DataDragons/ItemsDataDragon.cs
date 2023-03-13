@@ -19,20 +19,14 @@ namespace Lol.Net.Clients.DataDragons
 
         public async Task<DataDragonItems> GetItemsAsync(string version, LanguageEnum language)
         {
-            var result = await GetAsync<object>(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "item.json")).ConfigureAwait(false);
+            var result = await GetAsync<JObject>(Client, LolApiAddresses.DataDragonAddress.CombineUri(version, "data", language.Id, "item.json")).ConfigureAwait(false) ?? default!;
 
-            if (result == null)
-            {
-                return default!;
-            }
-
-            var obj = (JObject)result;
-            var type = obj.Value<string>("type") ?? string.Empty;
-            var _version = obj.Value<string>("version") ?? string.Empty;
-            var basic = JsonConvert.DeserializeObject<Basic>(obj.Value<string>("basic") ?? string.Empty) ?? default!;
-            var groups = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Group>>(obj.Value<string>("groups") ?? string.Empty) ?? default!;
-            var tree = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Tree>>(obj.Value<string>("tree") ?? string.Empty) ?? default!;
-            var data = obj.Value<JObject>("data") ?? default!;
+            var type = result.Value<string>("type") ?? string.Empty;
+            var _version = result.Value<string>("version") ?? string.Empty;
+            var basic = JsonConvert.DeserializeObject<Basic>(result.Value<string>("basic") ?? string.Empty) ?? default!;
+            var groups = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Group>>(result.Value<string>("groups") ?? string.Empty) ?? default!;
+            var tree = JsonConvert.DeserializeObject<IEnumerable<DataDragonItems_Tree>>(result.Value<string>("tree") ?? string.Empty) ?? default!;
+            var data = result.Value<JObject>("data") ?? default!;
 
             var items = new Dictionary<string, LolItem?>();
             foreach (var x in data)

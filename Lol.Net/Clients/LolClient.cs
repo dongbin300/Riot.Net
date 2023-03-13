@@ -26,7 +26,7 @@ namespace Lol.Net.Clients
         public LolMatchApi Match { get; set; }
         public LolChallengesApi Challenges { get; set; }
 
-        public LolClient(string apiKey = "", PlatformRouting defaultPlatformRouting = PlatformRouting.None)
+        public LolClient(string apiKey = "", PlatformRouting defaultPlatformRouting = PlatformRouting.None, RegionalRouting defaultRegionalRouting = RegionalRouting.None)
         {
             Client = new HttpClient(new HttpClientHandler() { ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true });
             DataDragon = new LolDataDragon(Client);
@@ -43,7 +43,7 @@ namespace Lol.Net.Clients
             TournamentStub = new LolTournamentStubApi(Client, apiKey, defaultPlatformRouting);
             LeagueExp = new LolLeagueExpApi(Client, apiKey, defaultPlatformRouting);
             Clash = new LolClashApi(Client, apiKey, defaultPlatformRouting);
-            Match = new LolMatchApi(Client, apiKey, defaultPlatformRouting);
+            Match = new LolMatchApi(Client, apiKey, defaultPlatformRouting, defaultRegionalRouting);
             Challenges = new LolChallengesApi(Client, apiKey, defaultPlatformRouting);
         }
     }

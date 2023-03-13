@@ -19,7 +19,7 @@ namespace Lol.Net.Clients.LolApis
             return await GetAsync<IEnumerable<LolChampionMastery>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summonerId}?api_key={apiKey}").ConfigureAwait(false);
         }
 
-        public async Task<LolChampionMastery> GetChampionMasteryByChampionIdAsync(string summonerId, string championId)
+        public async Task<LolChampionMastery> GetChampionMasteryByChampionIdAsync(string summonerId, long championId)
         {
             return await GetAsync<LolChampionMastery>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summonerId}/by-champion/{championId}?api_key={apiKey}").ConfigureAwait(false);
         }

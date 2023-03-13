@@ -13,4 +13,8 @@
     public record LolChallengePlayerClientPreferences(string bannerAccent, string title, IEnumerable<long> challengeIds);
 
     public record LolChallengePoints(string level, long current, long max, decimal percentile);
+
+    public record LolChallengeLevelToPercentile(IDictionary<string, LolChallengePercentile> percentiles);
+
+    public record LolChallengePercentile(decimal CHALLENGER, decimal DIAMOND, decimal SILVER, decimal IRON, decimal GRANDMASTER, decimal BRONZE, decimal MASTER, decimal PLATINUM, decimal GOLD);
 }
