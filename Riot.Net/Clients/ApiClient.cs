@@ -8,6 +8,11 @@ namespace Riot.Net.Clients
         protected PlatformRouting defaultPlatformRouting { get; set; }
         protected RegionalRouting defaultRegionalRouting { get; set; }
 
+        public ApiClient()
+        {
+            apiKey = string.Empty;
+        }
+
         public ApiClient(HttpClient client, string apiKey, PlatformRouting defaultPlatformRouting)
         {
             Client = client;

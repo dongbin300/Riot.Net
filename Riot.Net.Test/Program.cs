@@ -1,4 +1,6 @@
-﻿namespace Riot.Net.Test
+﻿using Val.Net.Clients;
+
+namespace Riot.Net.Test
 {
     internal class Program
     {
@@ -6,7 +8,12 @@
 
         static void Main(string[] args)
         {
+            ValClient app = new ValClient(developmentApiKey, Val.Net.Enums.ValRegion.KR);
 
+             var result = app.Content.GetContentOptionallyByLocaleAsync();
+            result.Wait();
+
+            Console.WriteLine(result);
         }
     }
 }

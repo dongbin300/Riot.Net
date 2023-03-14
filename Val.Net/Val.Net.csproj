@@ -1,16 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lol.Net\Lol.Net.csproj" />
-    <ProjectReference Include="..\Tft.Net\Tft.Net.csproj" />
-    <ProjectReference Include="..\Val.Net\Val.Net.csproj" />
+    <ProjectReference Include="..\Riot.Net\Riot.Net.csproj" />
   </ItemGroup>
 
 </Project>

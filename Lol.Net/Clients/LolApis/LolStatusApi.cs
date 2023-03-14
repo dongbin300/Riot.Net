@@ -13,9 +13,9 @@ namespace Lol.Net.Clients.LolApis
             this.defaultPlatformRouting = defaultPlatformRouting;
         }
 
-        public async Task<LolPlatformData> GetStatusAsync()
+        public async Task<LolStatusPlatformData> GetStatusAsync()
         {
-            return await GetAsync<LolPlatformData>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/status/v4/platform-data?api_key={apiKey}").ConfigureAwait(false);
+            return await GetAsync<LolStatusPlatformData>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/lol/status/v4/platform-data?api_key={apiKey}").ConfigureAwait(false);
         }
     }
 }
