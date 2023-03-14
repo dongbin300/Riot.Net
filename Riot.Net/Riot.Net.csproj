@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>Riot.Net</PackageId>
-		<Version>1.8.12</Version>
+		<Version>1.8.13</Version>
 		<Authors>Gaten</Authors>
 		<Company>Erin Wave</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

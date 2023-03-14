@@ -1,5 +1,8 @@
 namespace Lol.Net.Tests
 {
+    /// <summary>
+    /// Not Implemented
+    /// </summary>
     public class LolNetTournamentTests
     {
         [SetUp]
