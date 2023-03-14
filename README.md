@@ -1,4 +1,8 @@
 # Riot.Net
+[![NuGet latest version](https://badgen.net/nuget/v/Riot.Net/latest)](https://nuget.org/packages/Riot.Net)
+[![GitHub forks](https://badgen.net/github/forks/dongbin300/Riot.Net/)](https://GitHub.com/dongbin300/Riot.Net/network/)
+![Profile views](https://gpvc.arturio.dev/dongbin300)
+<br/><br/>
 RiotGames Open API wrapper for .NET includes League of Legends(LoL), Legends of Runeterra(LoR), Teamfight Tactics(TFT) and Valorant(VAL).
 
 ## Documents
