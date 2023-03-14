@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>Riot.Net</PackageId>
-		<Version>1.10.15</Version>
+		<Version>2.0.16</Version>
 		<Authors>Gaten</Authors>
 		<Company>Erin Wave</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -14,9 +14,11 @@
 		<Description>
 			RiotGames Open API wrapper for .NET includes League of Legends(LoL), Legends of Runeterra(LoR), Teamfight Tactics(TFT) and Valorant(VAL).
 		</Description>
+		<ApplicationIcon>Icon\riot.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="Icon\riot.ico" />
 		<None Remove="Icon\riot.png" />
 	</ItemGroup>
 
@@ -25,9 +27,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Resource Include="Icon\riot.png">
+		<Content Include="Icon\riot.ico">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Icon\riot.png">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Resource>
+		</Content>
 	</ItemGroup>
 
 </Project>
