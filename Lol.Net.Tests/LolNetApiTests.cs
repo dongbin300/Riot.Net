@@ -1,5 +1,6 @@
 using Lol.Net.Clients;
 
+using Riot.Net;
 using Riot.Net.Enums;
 
 namespace Lol.Net.Tests
@@ -14,8 +15,7 @@ namespace Lol.Net.Tests
         [SetUp]
         public void Setup()
         {
-            var apiKey = File.ReadAllText("C:\\riotapi.txt");
-            app = new LolClient(apiKey, PlatformRouting.KR, RegionalRouting.ASIA);
+            app = new LolClient(Configuration.DevelopmentApiKey, PlatformRouting.KR, RegionalRouting.ASIA);
         }
 
         [Test]
