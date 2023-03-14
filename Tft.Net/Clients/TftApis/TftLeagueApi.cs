@@ -19,14 +19,14 @@ namespace Tft.Net.Clients.TftApis
             return await GetAsync<TftLeagueList>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/challenger?api_key={apiKey}").ConfigureAwait(false);
         }
 
-        public async Task<TftLeagueEntry> GetLeagueEntriesBySummonerIdAsync(string summonerId)
+        public async Task<IEnumerable<TftLeagueEntry>> GetLeagueEntriesBySummonerIdAsync(string summonerId)
         {
-            return await GetAsync<TftLeagueEntry>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/entries/by-summoner/{summonerId}?api_key={apiKey}").ConfigureAwait(false);
+            return await GetAsync<IEnumerable<TftLeagueEntry>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/entries/by-summoner/{summonerId}?api_key={apiKey}").ConfigureAwait(false);
         }
 
-        public async Task<TftLeagueEntry> GetAllLeagueEntriesAsync(Tier tier, Division division)
+        public async Task<IEnumerable<TftLeagueEntry>> GetAllLeagueEntriesAsync(Tier tier, Division division)
         {
-            return await GetAsync<TftLeagueEntry>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/entries/{tier.ToUrlString()}/{division.ToUrlString()}?api_key={apiKey}").ConfigureAwait(false);
+            return await GetAsync<IEnumerable<TftLeagueEntry>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/entries/{tier.ToUrlString()}/{division.ToUrlString()}?api_key={apiKey}").ConfigureAwait(false);
         }
 
         public async Task<TftLeagueList> GetGrandMasterLeagueAsync()
@@ -44,9 +44,9 @@ namespace Tft.Net.Clients.TftApis
             return await GetAsync<TftLeagueList>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/master?api_key={apiKey}").ConfigureAwait(false);
         }
 
-        public async Task<TftLeagueList> GetTopRatedLadderAsync(Queue queue)
+        public async Task<IEnumerable<TftLeagueTopRatedLadderEntry>> GetTopRatedLadderAsync(Queue queue)
         {
-            return await GetAsync<TftLeagueList>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/rated-ladders/{queue.ToUrlString()}/top?api_key={apiKey}").ConfigureAwait(false);
+            return await GetAsync<IEnumerable<TftLeagueTopRatedLadderEntry>>(Client, $"https://{defaultPlatformRouting}.api.riotgames.com/tft/league/v1/rated-ladders/{queue.ToUrlString()}/top?api_key={apiKey}").ConfigureAwait(false);
         }
     }
 }

@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Val.Net", "Val.Net\Val.Net.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lor.Net.Tests", "Lor.Net.Tests\Lor.Net.Tests.csproj", "{216A4503-E137-40D1-B38F-88F24DA3F14E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tft.Net.Tests", "Tft.Net.Tests\Tft.Net.Tests.csproj", "{0B48BED5-624A-4A85-A2BF-1D2D7CAB817E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{216A4503-E137-40D1-B38F-88F24DA3F14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{216A4503-E137-40D1-B38F-88F24DA3F14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{216A4503-E137-40D1-B38F-88F24DA3F14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B48BED5-624A-4A85-A2BF-1D2D7CAB817E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B48BED5-624A-4A85-A2BF-1D2D7CAB817E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B48BED5-624A-4A85-A2BF-1D2D7CAB817E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B48BED5-624A-4A85-A2BF-1D2D7CAB817E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,16 +1,14 @@
-﻿using Val.Net.Clients;
+﻿using Tft.Net.Clients;
 
 namespace Riot.Net.Test
 {
     internal class Program
     {
-        static string developmentApiKey = "RGAPI-dba6629c-fbc3-40a5-8f06-30f4ac9977b2";
-
         static void Main(string[] args)
         {
-            ValClient app = new ValClient(developmentApiKey, Val.Net.Enums.ValRegion.KR);
+            TftClient app = new TftClient(Configuration.DevelopmentApiKey, Enums.PlatformRouting.KR, Enums.RegionalRouting.ASIA);
 
-             var result = app.Content.GetContentOptionallyByLocaleAsync();
+             var result = app.Summoner.GetSummonerBySummonerNameAsync("플라인드");
             result.Wait();
 
             Console.WriteLine(result);
