@@ -1,5 +1,5 @@
 # Riot.Net
-[![NuGet latest version](https://badgen.net/nuget/v/Riot.Net/latest)](https://nuget.org/packages/Riot.Net)
+[![NuGet latest version](https://badgen.net/nuget/v/Riot.Lol.Net/latest)](https://nuget.org/packages/Riot.Lol.Net)
 [![GitHub forks](https://badgen.net/github/forks/dongbin300/Riot.Net/)](https://GitHub.com/dongbin300/Riot.Net/network/)
 ![Profile views](https://gpvc.arturio.dev/dongbin300)
 <br/><br/>
