@@ -14,25 +14,17 @@
 		<Description>
 			RiotGames Open API wrapper for .NET includes League of Legends(LoL), Legends of Runeterra(LoR), Teamfight Tactics(TFT) and Valorant(VAL).
 		</Description>
-		<ApplicationIcon>Icon\riot.ico</ApplicationIcon>
+		<PackageIcon>riot.png</PackageIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Remove="Icon\riot.ico" />
-		<None Remove="Icon\riot.png" />
+		<None Include="riot.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	</ItemGroup>
-
-	<ItemGroup>
-		<Content Include="Icon\riot.ico">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-		<Content Include="Icon\riot.png">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</Content>
-	</ItemGroup>
-
 </Project>

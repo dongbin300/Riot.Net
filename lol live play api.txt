@@ -1,0 +1,1203 @@
+/allgamedata
+
+{
+    "activePlayer": {
+        "abilities": {
+            "E": {
+                "abilityLevel": 0,
+                "displayName": "선고",
+                "id": "VayneCondemn",
+                "rawDescription": "GeneratedTip_Spell_VayneCondemn_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneCondemn_DisplayName"
+            },
+            "Passive": {
+                "displayName": "어둠 사냥꾼",
+                "id": "VaynePassive",
+                "rawDescription": "GeneratedTip_Passive_VaynePassive_Description",
+                "rawDisplayName": "GeneratedTip_Passive_VaynePassive_DisplayName"
+            },
+            "Q": {
+                "abilityLevel": 0,
+                "displayName": "구르기",
+                "id": "VayneTumble",
+                "rawDescription": "GeneratedTip_Spell_VayneTumble_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneTumble_DisplayName"
+            },
+            "R": {
+                "abilityLevel": 0,
+                "displayName": "결전의 시간",
+                "id": "VayneInquisition",
+                "rawDescription": "GeneratedTip_Spell_VayneInquisition_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneInquisition_DisplayName"
+            },
+            "W": {
+                "abilityLevel": 0,
+                "displayName": "은화살",
+                "id": "VayneSilveredBolts",
+                "rawDescription": "GeneratedTip_Spell_VayneSilveredBolts_Description",
+                "rawDisplayName": "GeneratedTip_Spell_VayneSilveredBolts_DisplayName"
+            }
+        },
+        "championStats": {
+            "abilityHaste": 0.0,
+            "abilityPower": 0.0,
+            "armor": 29.0,
+            "armorPenetrationFlat": 0.0,
+            "armorPenetrationPercent": 1.0,
+            "attackDamage": 65.4000015258789,
+            "attackRange": 550.0,
+            "attackSpeed": 0.7435399889945984,
+            "bonusArmorPenetrationPercent": 1.0,
+            "bonusMagicPenetrationPercent": 1.0,
+            "critChance": 0.0,
+            "critDamage": 175.0,
+            "currentHealth": 550.0,
+            "healShieldPower": 0.0,
+            "healthRegenRate": 0.699999988079071,
+            "lifeSteal": 0.0,
+            "magicLethality": 0.0,
+            "magicPenetrationFlat": 0.0,
+            "magicPenetrationPercent": 1.0,
+            "magicResist": 30.0,
+            "maxHealth": 550.0,
+            "moveSpeed": 683.75,
+            "omnivamp": 0.0,
+            "physicalLethality": 0.0,
+            "physicalVamp": 0.0,
+            "resourceMax": 232.0,
+            "resourceRegenRate": 1.399999976158142,
+            "resourceType": "MANA",
+            "resourceValue": 232.0,
+            "spellVamp": 0.0,
+            "tenacity": 5.0
+        },
+        "currentGold": 500.0,
+        "fullRunes": {
+            "generalRunes": [
+                {
+                    "displayName": "치명적 속도",
+                    "id": 8008,
+                    "rawDescription": "perk_tooltip_LethalTempo",
+                    "rawDisplayName": "perk_displayname_LethalTempo"
+                },
+                {
+                    "displayName": "승전보",
+                    "id": 9111,
+                    "rawDescription": "perk_tooltip_9111",
+                    "rawDisplayName": "perk_displayname_9111"
+                },
+                {
+                    "displayName": "전설: 민첩함",
+                    "id": 9104,
+                    "rawDescription": "perk_tooltip_9104",
+                    "rawDisplayName": "perk_displayname_9104"
+                },
+                {
+                    "displayName": "최후의 일격",
+                    "id": 8014,
+                    "rawDescription": "perk_tooltip_CoupDeGrace",
+                    "rawDisplayName": "perk_displayname_CoupDeGrace"
+                },
+                {
+                    "displayName": "피의 맛",
+                    "id": 8139,
+                    "rawDescription": "perk_tooltip_TasteOfBlood",
+                    "rawDisplayName": "perk_displayname_TasteOfBlood"
+                },
+                {
+                    "displayName": "보물 사냥꾼",
+                    "id": 8135,
+                    "rawDescription": "perk_tooltip_TreasureHunter",
+                    "rawDisplayName": "perk_displayname_TreasureHunter"
+                }
+            ],
+            "keystone": {
+                "displayName": "치명적 속도",
+                "id": 8008,
+                "rawDescription": "perk_tooltip_LethalTempo",
+                "rawDisplayName": "perk_displayname_LethalTempo"
+            },
+            "primaryRuneTree": {
+                "displayName": "정밀",
+                "id": 8000,
+                "rawDescription": "perkstyle_tooltip_7201",
+                "rawDisplayName": "perkstyle_displayname_7201"
+            },
+            "secondaryRuneTree": {
+                "displayName": "지배",
+                "id": 8100,
+                "rawDescription": "perkstyle_tooltip_7200",
+                "rawDisplayName": "perkstyle_displayname_7200"
+            },
+            "statRunes": [
+                {
+                    "id": 5005,
+                    "rawDescription": "perk_tooltip_StatModAttackSpeed"
+                },
+                {
+                    "id": 5008,
+                    "rawDescription": "perk_tooltip_StatModAdaptive"
+                },
+                {
+                    "id": 5002,
+                    "rawDescription": "perk_tooltip_StatModArmor"
+                }
+            ]
+        },
+        "level": 1,
+        "summonerName": "베인인베인",
+        "teamRelativeColors": true
+    },
+    "allPlayers": [
+        {
+            "championName": "베인",
+            "isBot": false,
+            "isDead": false,
+            "items": [],
+            "level": 1,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Vayne",
+            "rawSkinName": "game_character_skin_displayname_Vayne_6",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "치명적 속도",
+                    "id": 8008,
+                    "rawDescription": "perk_tooltip_LethalTempo",
+                    "rawDisplayName": "perk_displayname_LethalTempo"
+                },
+                "primaryRuneTree": {
+                    "displayName": "정밀",
+                    "id": 8000,
+                    "rawDescription": "perkstyle_tooltip_7201",
+                    "rawDisplayName": "perkstyle_displayname_7201"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "지배",
+                    "id": 8100,
+                    "rawDescription": "perkstyle_tooltip_7200",
+                    "rawDisplayName": "perkstyle_displayname_7200"
+                }
+            },
+            "scores": {
+                "assists": 0,
+                "creepScore": 0,
+                "deaths": 0,
+                "kills": 0,
+                "wardScore": 0.0
+            },
+            "skinID": 6,
+            "skinName": "빛의 베인",
+            "summonerName": "베인인베인",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "순간이동",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "회복",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+                }
+            },
+            "team": "ORDER"
+        },
+        {
+            "championName": "블리츠크랭크",
+            "isBot": true,
+            "isDead": false,
+            "items": [],
+            "level": 1,
+            "position": "",
+            "rawChampionName": "game_character_displayname_Blitzcrank",
+            "respawnTimer": 0.0,
+            "runes": {
+                "keystone": {
+                    "displayName": "착취의 손아귀",
+                    "id": 8437,
+                    "rawDescription": "perk_tooltip_GraspOfTheUndying",
+                    "rawDisplayName": "perk_displayname_GraspOfTheUndying"
+                },
+                "primaryRuneTree": {
+                    "displayName": "결의",
+                    "id": 8400,
+                    "rawDescription": "perkstyle_tooltip_7204",
+                    "rawDisplayName": "perkstyle_displayname_7204"
+                },
+                "secondaryRuneTree": {
+                    "displayName": "마법",
+                    "id": 8200,
+                    "rawDescription": "perkstyle_tooltip_7202",
+                    "rawDisplayName": "perkstyle_displayname_7202"
+                }
+            },
+            "scores": {
+                "assists": 0,
+                "creepScore": 0,
+                "deaths": 0,
+                "kills": 0,
+                "wardScore": 0.0
+            },
+            "skinID": 0,
+            "summonerName": "블리츠크랭크 봇",
+            "summonerSpells": {
+                "summonerSpellOne": {
+                    "displayName": "유체화",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+                },
+                "summonerSpellTwo": {
+                    "displayName": "순간이동",
+                    "rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
+                    "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
+                }
+            },
+            "team": "CHAOS"
+        }
+    ],
+    "events": {
+        "Events": [
+            {
+                "EventID": 0,
+                "EventName": "GameStart",
+                "EventTime": 0.007021700032055378
+            }
+        ]
+    },
+    "gameData": {
+        "gameMode": "CLASSIC",
+        "gameTime": 9.426722526550293,
+        "mapName": "Map11",
+        "mapNumber": 11,
+        "mapTerrain": "Default"
+    }
+}
+
+  public class E
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Passive
+    {
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Q
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class R
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class W
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Abilities
+    {
+        public E E { get; set; }
+        public Passive Passive { get; set; }
+        public Q Q { get; set; }
+        public R R { get; set; }
+        public W W { get; set; }
+    }
+
+    public class ChampionStats
+    {
+        public double abilityHaste { get; set; }
+        public double abilityPower { get; set; }
+        public double armor { get; set; }
+        public double armorPenetrationFlat { get; set; }
+        public double armorPenetrationPercent { get; set; }
+        public double attackDamage { get; set; }
+        public double attackRange { get; set; }
+        public double attackSpeed { get; set; }
+        public double bonusArmorPenetrationPercent { get; set; }
+        public double bonusMagicPenetrationPercent { get; set; }
+        public double critChance { get; set; }
+        public double critDamage { get; set; }
+        public double currentHealth { get; set; }
+        public double healShieldPower { get; set; }
+        public double healthRegenRate { get; set; }
+        public double lifeSteal { get; set; }
+        public double magicLethality { get; set; }
+        public double magicPenetrationFlat { get; set; }
+        public double magicPenetrationPercent { get; set; }
+        public double magicResist { get; set; }
+        public double maxHealth { get; set; }
+        public double moveSpeed { get; set; }
+        public double omnivamp { get; set; }
+        public double physicalLethality { get; set; }
+        public double physicalVamp { get; set; }
+        public double resourceMax { get; set; }
+        public double resourceRegenRate { get; set; }
+        public string resourceType { get; set; }
+        public double resourceValue { get; set; }
+        public double spellVamp { get; set; }
+        public double tenacity { get; set; }
+    }
+
+    public class GeneralRune
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Keystone
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class PrimaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SecondaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class StatRune
+    {
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+    }
+
+    public class FullRunes
+    {
+        public IList<GeneralRune> generalRunes { get; set; }
+        public Keystone keystone { get; set; }
+        public PrimaryRuneTree primaryRuneTree { get; set; }
+        public SecondaryRuneTree secondaryRuneTree { get; set; }
+        public IList<StatRune> statRunes { get; set; }
+    }
+
+    public class ActivePlayer
+    {
+        public Abilities abilities { get; set; }
+        public ChampionStats championStats { get; set; }
+        public double currentGold { get; set; }
+        public FullRunes fullRunes { get; set; }
+        public int level { get; set; }
+        public string summonerName { get; set; }
+        public bool teamRelativeColors { get; set; }
+    }
+
+    public class Runes
+    {
+        public Keystone keystone { get; set; }
+        public PrimaryRuneTree primaryRuneTree { get; set; }
+        public SecondaryRuneTree secondaryRuneTree { get; set; }
+    }
+
+    public class Scores
+    {
+        public int assists { get; set; }
+        public int creepScore { get; set; }
+        public int deaths { get; set; }
+        public int kills { get; set; }
+        public double wardScore { get; set; }
+    }
+
+    public class SummonerSpellOne
+    {
+        public string displayName { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SummonerSpellTwo
+    {
+        public string displayName { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SummonerSpells
+    {
+        public SummonerSpellOne summonerSpellOne { get; set; }
+        public SummonerSpellTwo summonerSpellTwo { get; set; }
+    }
+
+    public class AllPlayer
+    {
+        public string championName { get; set; }
+        public bool isBot { get; set; }
+        public bool isDead { get; set; }
+        public IList<object> items { get; set; }
+        public int level { get; set; }
+        public string position { get; set; }
+        public string rawChampionName { get; set; }
+        public string rawSkinName { get; set; }
+        public double respawnTimer { get; set; }
+        public Runes runes { get; set; }
+        public Scores scores { get; set; }
+        public int skinID { get; set; }
+        public string skinName { get; set; }
+        public string summonerName { get; set; }
+        public SummonerSpells summonerSpells { get; set; }
+        public string team { get; set; }
+    }
+
+    public class Event
+    {
+        public int EventID { get; set; }
+        public string EventName { get; set; }
+        public double EventTime { get; set; }
+    }
+
+    public class Events
+    {
+        public IList<Event> Events { get; set; }
+    }
+
+    public class GameData
+    {
+        public string gameMode { get; set; }
+        public double gameTime { get; set; }
+        public string mapName { get; set; }
+        public int mapNumber { get; set; }
+        public string mapTerrain { get; set; }
+    }
+
+    public class Example
+    {
+        public ActivePlayer activePlayer { get; set; }
+        public IList<AllPlayer> allPlayers { get; set; }
+        public Events events { get; set; }
+        public GameData gameData { get; set; }
+    }
+
+
+
+/activeplayerabilities
+
+{
+    "E": {
+        "abilityLevel": 0,
+        "displayName": "선고",
+        "id": "VayneCondemn",
+        "rawDescription": "GeneratedTip_Spell_VayneCondemn_Description",
+        "rawDisplayName": "GeneratedTip_Spell_VayneCondemn_DisplayName"
+    },
+    "Passive": {
+        "displayName": "어둠 사냥꾼",
+        "id": "VaynePassive",
+        "rawDescription": "GeneratedTip_Passive_VaynePassive_Description",
+        "rawDisplayName": "GeneratedTip_Passive_VaynePassive_DisplayName"
+    },
+    "Q": {
+        "abilityLevel": 1,
+        "displayName": "구르기",
+        "id": "VayneTumble",
+        "rawDescription": "GeneratedTip_Spell_VayneTumble_Description",
+        "rawDisplayName": "GeneratedTip_Spell_VayneTumble_DisplayName"
+    },
+    "R": {
+        "abilityLevel": 0,
+        "displayName": "결전의 시간",
+        "id": "VayneInquisition",
+        "rawDescription": "GeneratedTip_Spell_VayneInquisition_Description",
+        "rawDisplayName": "GeneratedTip_Spell_VayneInquisition_DisplayName"
+    },
+    "W": {
+        "abilityLevel": 0,
+        "displayName": "은화살",
+        "id": "VayneSilveredBolts",
+        "rawDescription": "GeneratedTip_Spell_VayneSilveredBolts_Description",
+        "rawDisplayName": "GeneratedTip_Spell_VayneSilveredBolts_DisplayName"
+    }
+}
+
+ public class E
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Passive
+    {
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Q
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class R
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class W
+    {
+        public int abilityLevel { get; set; }
+        public string displayName { get; set; }
+        public string id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Example
+    {
+        public E E { get; set; }
+        public Passive Passive { get; set; }
+        public Q Q { get; set; }
+        public R R { get; set; }
+        public W W { get; set; }
+    }
+
+
+/activeplayerrunes
+
+{
+    "generalRunes": [
+        {
+            "displayName": "치명적 속도",
+            "id": 8008,
+            "rawDescription": "perk_tooltip_LethalTempo",
+            "rawDisplayName": "perk_displayname_LethalTempo"
+        },
+        {
+            "displayName": "승전보",
+            "id": 9111,
+            "rawDescription": "perk_tooltip_9111",
+            "rawDisplayName": "perk_displayname_9111"
+        },
+        {
+            "displayName": "전설: 민첩함",
+            "id": 9104,
+            "rawDescription": "perk_tooltip_9104",
+            "rawDisplayName": "perk_displayname_9104"
+        },
+        {
+            "displayName": "최후의 일격",
+            "id": 8014,
+            "rawDescription": "perk_tooltip_CoupDeGrace",
+            "rawDisplayName": "perk_displayname_CoupDeGrace"
+        },
+        {
+            "displayName": "피의 맛",
+            "id": 8139,
+            "rawDescription": "perk_tooltip_TasteOfBlood",
+            "rawDisplayName": "perk_displayname_TasteOfBlood"
+        },
+        {
+            "displayName": "보물 사냥꾼",
+            "id": 8135,
+            "rawDescription": "perk_tooltip_TreasureHunter",
+            "rawDisplayName": "perk_displayname_TreasureHunter"
+        }
+    ],
+    "keystone": {
+        "displayName": "치명적 속도",
+        "id": 8008,
+        "rawDescription": "perk_tooltip_LethalTempo",
+        "rawDisplayName": "perk_displayname_LethalTempo"
+    },
+    "primaryRuneTree": {
+        "displayName": "정밀",
+        "id": 8000,
+        "rawDescription": "perkstyle_tooltip_7201",
+        "rawDisplayName": "perkstyle_displayname_7201"
+    },
+    "secondaryRuneTree": {
+        "displayName": "지배",
+        "id": 8100,
+        "rawDescription": "perkstyle_tooltip_7200",
+        "rawDisplayName": "perkstyle_displayname_7200"
+    },
+    "statRunes": [
+        {
+            "id": 5005,
+            "rawDescription": "perk_tooltip_StatModAttackSpeed"
+        },
+        {
+            "id": 5008,
+            "rawDescription": "perk_tooltip_StatModAdaptive"
+        },
+        {
+            "id": 5002,
+            "rawDescription": "perk_tooltip_StatModArmor"
+        }
+    ]
+}
+
+public class GeneralRune
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Keystone
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class PrimaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SecondaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class StatRune
+    {
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+    }
+
+    public class Example
+    {
+        public IList<GeneralRune> generalRunes { get; set; }
+        public Keystone keystone { get; set; }
+        public PrimaryRuneTree primaryRuneTree { get; set; }
+        public SecondaryRuneTree secondaryRuneTree { get; set; }
+        public IList<StatRune> statRunes { get; set; }
+    }
+
+/playerlist
+
+[
+    {
+        "championName": "베인",
+        "isBot": false,
+        "isDead": false,
+        "items": [
+            {
+                "canUse": false,
+                "consumable": false,
+                "count": 1,
+                "displayName": "도란의 검",
+                "itemID": 1055,
+                "price": 450,
+                "rawDescription": "GeneratedTip_Item_1055_Description",
+                "rawDisplayName": "Item_1055_Name",
+                "slot": 0
+            },
+            {
+                "canUse": true,
+                "consumable": true,
+                "count": 1,
+                "displayName": "체력 물약",
+                "itemID": 2003,
+                "price": 50,
+                "rawDescription": "GeneratedTip_Item_2003_Description",
+                "rawDisplayName": "Item_2003_Name",
+                "slot": 1
+            },
+            {
+                "canUse": true,
+                "consumable": false,
+                "count": 1,
+                "displayName": "투명 와드",
+                "itemID": 3340,
+                "price": 0,
+                "rawDescription": "GeneratedTip_Item_3340_Description",
+                "rawDisplayName": "Item_3340_Name",
+                "slot": 6
+            }
+        ],
+        "level": 1,
+        "position": "",
+        "rawChampionName": "game_character_displayname_Vayne",
+        "rawSkinName": "game_character_skin_displayname_Vayne_6",
+        "respawnTimer": 0.0,
+        "runes": {
+            "keystone": {
+                "displayName": "치명적 속도",
+                "id": 8008,
+                "rawDescription": "perk_tooltip_LethalTempo",
+                "rawDisplayName": "perk_displayname_LethalTempo"
+            },
+            "primaryRuneTree": {
+                "displayName": "정밀",
+                "id": 8000,
+                "rawDescription": "perkstyle_tooltip_7201",
+                "rawDisplayName": "perkstyle_displayname_7201"
+            },
+            "secondaryRuneTree": {
+                "displayName": "지배",
+                "id": 8100,
+                "rawDescription": "perkstyle_tooltip_7200",
+                "rawDisplayName": "perkstyle_displayname_7200"
+            }
+        },
+        "scores": {
+            "assists": 0,
+            "creepScore": 0,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0.0
+        },
+        "skinID": 6,
+        "skinName": "빛의 베인",
+        "summonerName": "베인인베인",
+        "summonerSpells": {
+            "summonerSpellOne": {
+                "displayName": "순간이동",
+                "rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
+                "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
+            },
+            "summonerSpellTwo": {
+                "displayName": "회복",
+                "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+                "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+            }
+        },
+        "team": "ORDER"
+    },
+    {
+        "championName": "블리츠크랭크",
+        "isBot": true,
+        "isDead": false,
+        "items": [
+            {
+                "canUse": false,
+                "consumable": false,
+                "count": 1,
+                "displayName": "고대유물 방패",
+                "itemID": 3858,
+                "price": 400,
+                "rawDescription": "GeneratedTip_Item_3858_Description",
+                "rawDisplayName": "Item_3858_Name",
+                "slot": 0
+            },
+            {
+                "canUse": true,
+                "consumable": true,
+                "count": 2,
+                "displayName": "체력 물약",
+                "itemID": 2003,
+                "price": 50,
+                "rawDescription": "GeneratedTip_Item_2003_Description",
+                "rawDisplayName": "Item_2003_Name",
+                "slot": 1
+            },
+            {
+                "canUse": true,
+                "consumable": false,
+                "count": 1,
+                "displayName": "투명 와드",
+                "itemID": 3340,
+                "price": 0,
+                "rawDescription": "GeneratedTip_Item_3340_Description",
+                "rawDisplayName": "Item_3340_Name",
+                "slot": 6
+            }
+        ],
+        "level": 3,
+        "position": "",
+        "rawChampionName": "game_character_displayname_Blitzcrank",
+        "respawnTimer": 0.0,
+        "runes": {
+            "keystone": {
+                "displayName": "착취의 손아귀",
+                "id": 8437,
+                "rawDescription": "perk_tooltip_GraspOfTheUndying",
+                "rawDisplayName": "perk_displayname_GraspOfTheUndying"
+            },
+            "primaryRuneTree": {
+                "displayName": "결의",
+                "id": 8400,
+                "rawDescription": "perkstyle_tooltip_7204",
+                "rawDisplayName": "perkstyle_displayname_7204"
+            },
+            "secondaryRuneTree": {
+                "displayName": "마법",
+                "id": 8200,
+                "rawDescription": "perkstyle_tooltip_7202",
+                "rawDisplayName": "perkstyle_displayname_7202"
+            }
+        },
+        "scores": {
+            "assists": 0,
+            "creepScore": 10,
+            "deaths": 0,
+            "kills": 0,
+            "wardScore": 0.0
+        },
+        "skinID": 0,
+        "summonerName": "블리츠크랭크 봇",
+        "summonerSpells": {
+            "summonerSpellOne": {
+                "displayName": "유체화",
+                "rawDescription": "GeneratedTip_SummonerSpell_SummonerHaste_Description",
+                "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHaste_DisplayName"
+            },
+            "summonerSpellTwo": {
+                "displayName": "순간이동",
+                "rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
+                "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
+            }
+        },
+        "team": "CHAOS"
+    }
+]
+
+
+ public class Item
+    {
+        public bool canUse { get; set; }
+        public bool consumable { get; set; }
+        public int count { get; set; }
+        public string displayName { get; set; }
+        public int itemID { get; set; }
+        public int price { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+        public int slot { get; set; }
+    }
+
+    public class Keystone
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class PrimaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SecondaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Runes
+    {
+        public Keystone keystone { get; set; }
+        public PrimaryRuneTree primaryRuneTree { get; set; }
+        public SecondaryRuneTree secondaryRuneTree { get; set; }
+    }
+
+    public class Scores
+    {
+        public int assists { get; set; }
+        public int creepScore { get; set; }
+        public int deaths { get; set; }
+        public int kills { get; set; }
+        public double wardScore { get; set; }
+    }
+
+    public class SummonerSpellOne
+    {
+        public string displayName { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SummonerSpellTwo
+    {
+        public string displayName { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SummonerSpells
+    {
+        public SummonerSpellOne summonerSpellOne { get; set; }
+        public SummonerSpellTwo summonerSpellTwo { get; set; }
+    }
+
+    public class Example
+    {
+        public string championName { get; set; }
+        public bool isBot { get; set; }
+        public bool isDead { get; set; }
+        public IList<Item> items { get; set; }
+        public int level { get; set; }
+        public string position { get; set; }
+        public string rawChampionName { get; set; }
+        public string rawSkinName { get; set; }
+        public double respawnTimer { get; set; }
+        public Runes runes { get; set; }
+        public Scores scores { get; set; }
+        public int skinID { get; set; }
+        public string skinName { get; set; }
+        public string summonerName { get; set; }
+        public SummonerSpells summonerSpells { get; set; }
+        public string team { get; set; }
+    }
+
+
+/playerscores?summonerName=베인인베인
+
+{
+    "assists": 0,
+    "creepScore": 0,
+    "deaths": 0,
+    "kills": 0,
+    "wardScore": 0.0
+}
+ public class Example
+    {
+        public int assists { get; set; }
+        public int creepScore { get; set; }
+        public int deaths { get; set; }
+        public int kills { get; set; }
+        public double wardScore { get; set; }
+    }
+
+
+/playersummonerspells?summonerName=베인인베인
+
+{
+    "summonerSpellOne": {
+        "displayName": "순간이동",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerTeleport_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerTeleport_DisplayName"
+    },
+    "summonerSpellTwo": {
+        "displayName": "회복",
+        "rawDescription": "GeneratedTip_SummonerSpell_SummonerHeal_Description",
+        "rawDisplayName": "GeneratedTip_SummonerSpell_SummonerHeal_DisplayName"
+    }
+}
+ public class SummonerSpellOne
+    {
+        public string displayName { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SummonerSpellTwo
+    {
+        public string displayName { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Example
+    {
+        public SummonerSpellOne summonerSpellOne { get; set; }
+        public SummonerSpellTwo summonerSpellTwo { get; set; }
+    }
+
+/playermainrunes?summonerName=베인인베인
+
+{
+    "keystone": {
+        "displayName": "치명적 속도",
+        "id": 8008,
+        "rawDescription": "perk_tooltip_LethalTempo",
+        "rawDisplayName": "perk_displayname_LethalTempo"
+    },
+    "primaryRuneTree": {
+        "displayName": "정밀",
+        "id": 8000,
+        "rawDescription": "perkstyle_tooltip_7201",
+        "rawDisplayName": "perkstyle_displayname_7201"
+    },
+    "secondaryRuneTree": {
+        "displayName": "지배",
+        "id": 8100,
+        "rawDescription": "perkstyle_tooltip_7200",
+        "rawDisplayName": "perkstyle_displayname_7200"
+    }
+}
+
+  public class Keystone
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class PrimaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class SecondaryRuneTree
+    {
+        public string displayName { get; set; }
+        public int id { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+    }
+
+    public class Example
+    {
+        public Keystone keystone { get; set; }
+        public PrimaryRuneTree primaryRuneTree { get; set; }
+        public SecondaryRuneTree secondaryRuneTree { get; set; }
+    }
+
+/playeritems?summonerName=베인인베인
+
+[
+    {
+        "canUse": false,
+        "consumable": false,
+        "count": 1,
+        "displayName": "도란의 검",
+        "itemID": 1055,
+        "price": 450,
+        "rawDescription": "GeneratedTip_Item_1055_Description",
+        "rawDisplayName": "Item_1055_Name",
+        "slot": 0
+    },
+    {
+        "canUse": true,
+        "consumable": true,
+        "count": 1,
+        "displayName": "체력 물약",
+        "itemID": 2003,
+        "price": 50,
+        "rawDescription": "GeneratedTip_Item_2003_Description",
+        "rawDisplayName": "Item_2003_Name",
+        "slot": 1
+    },
+    {
+        "canUse": true,
+        "consumable": false,
+        "count": 1,
+        "displayName": "투명 와드",
+        "itemID": 3340,
+        "price": 0,
+        "rawDescription": "GeneratedTip_Item_3340_Description",
+        "rawDisplayName": "Item_3340_Name",
+        "slot": 6
+    }
+]
+
+    public class Example
+    {
+        public bool canUse { get; set; }
+        public bool consumable { get; set; }
+        public int count { get; set; }
+        public string displayName { get; set; }
+        public int itemID { get; set; }
+        public int price { get; set; }
+        public string rawDescription { get; set; }
+        public string rawDisplayName { get; set; }
+        public int slot { get; set; }
+    }
+
+/eventdata
+
+{
+    "Events": [
+        {
+            "EventID": 0,
+            "EventName": "GameStart",
+            "EventTime": 0.007021700032055378
+        },
+        {
+            "EventID": 1,
+            "EventName": "MinionsSpawning",
+            "EventTime": 65.04230499267578
+        }
+    ]
+}
+
+  public class Event
+    {
+        public int EventID { get; set; }
+        public string EventName { get; set; }
+        public double EventTime { get; set; }
+    }
+
+    public class Example
+    {
+        public IList<Event> Events { get; set; }
+    }
+
+
+/gamestats
+
+{
+    "gameMode": "CLASSIC",
+    "gameTime": 448.5924987792969,
+    "mapName": "Map11",
+    "mapNumber": 11,
+    "mapTerrain": "Default"
+}
+  public class Example
+    {
+        public string gameMode { get; set; }
+        public double gameTime { get; set; }
+        public string mapName { get; set; }
+        public int mapNumber { get; set; }
+        public string mapTerrain { get; set; }
+    }
